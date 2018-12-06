@@ -1,0 +1,20 @@
+/* pages/pay_course/pay_course.wxss */
+@import "/template/template.wxss";
+.menu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-shadow: 0 2px 4px 0 rgba(188,188,188,0.50);
+}
+.menu text{
+  flex: 1;
+  text-align: center;
+}
+.menu-current{
+  color: #C0A45B;
+  border-bottom: 4rpx solid #C0A45B;
+}

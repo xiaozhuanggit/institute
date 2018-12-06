@@ -1,0 +1,263 @@
+/* pages/order_sure/order_sure.wxss */
+page{
+  background-color: #efeff4;
+}
+
+
+.select-address{
+  width: 100%;
+  height: 128rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+.address-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+}
+.address-txt{
+  white-space: nowrap;
+}
+
+.non-address{
+  flex: 1;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+}
+.right-icon{
+  width: 24rpx;
+  height: 24rpx;
+  flex-shrink:0;
+}
+
+.goods{
+  width: 100%;
+  height: 172rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+.goods-img image{
+  width: 160rpx;
+  height: 120rpx;
+}
+.goods-info{
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex:1;
+}
+.goods-content{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.goods-num{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999;
+}
+.goods-money{
+  color: #E95A14;
+}
+
+.num-opt{
+  width: 166rpx;
+  height: 46rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10rpx;
+  border: 1px solid #d4d4d4;
+  border-radius:23rpx;
+  box-sizing:border-box;
+  font-size: 30rpx;
+}
+.num-opt text{
+  flex: 1;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+.key-value{
+  width: 100%;
+  height: 94rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.value{
+  flex:1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: right;
+  height: 100%;
+  color: #C0A45B;
+  font-size: 26rpx;
+}
+.de-address{
+  flex:1;
+  margin:0 10rpx;
+  color: #333;
+}
+.key-value input[type="text"]{
+  flex: 1;
+  color: #333;
+  text-align: right;
+}
+.value .right-icon{
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+  margin: 0 0 0 10rpx; 
+}
+
+.footer-menu{
+  width: 100%;
+  height: 98rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.footer-menu text{
+  flex:1;
+  font-size: 26rpx;
+  color: #999;
+}
+.footer-menu button{
+  width: 216rpx;
+  height: 78rpx;
+  background: #C0A45B;
+  border-radius: 20px;
+  font-size: 15px;
+  color: #FFFFFF;
+}
+
+.cover{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background-color: rgba(0,0,0,.4);
+  z-index: 99;
+}
+
+.dispatch{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.dispatch-title{
+  position: relative;
+  height: 94rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.cancel-btn{
+  position: absolute;
+  right: 30rpx;
+  top:36rpx;
+}
+.dispatch-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+}
+.dispatch-content{
+  flex: 1;
+}
+.dispatch-name{
+  font-size: 26rpx;
+}
+.since-txt{
+  margin-right: 10rpx;
+  font-size: 30rpx;
+}
+.dispatch-address,.dispatch-time{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: top;
+  font-size: 26rpx;
+  color: #999;
+}
+.dispatch-address-txt,.dispatch-time-txt{
+   white-space: nowrap;
+}
+.store-address,.store-time{
+  flex: 1;
+}
+.logistics{
+  height: 100rpx;
+  box-sizing: border-box;
+}
+.logistics-goods{
+  flex: 1;
+}
+
+.model{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -278rpx 0 0 -295rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 590rpx;
+  height: 556rpx;
+  border-radius: 6rpx;
+}
+.state-icon{
+  width: 180rpx;
+  height: 180rpx;
+}
+.state-content{
+  color: #999;
+}
+.model-btn{
+  width: 100%;
+}
+.model-btn button{
+  width: 350rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  background: #C0A45B;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  color: #fff;
+}

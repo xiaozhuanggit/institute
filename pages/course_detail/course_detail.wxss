@@ -1,0 +1,388 @@
+/* pages/course_detail/course_detail.wxss */
+@import "/template/template.wxss";
+page{
+  background-color: #efeff4;
+}
+.course{
+  width: 100%;
+  height: 422rpx;
+}
+
+.cover-info{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items:flex-end;
+  width: 100%;
+  height: 122rpx;
+  font-size: 20rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.back-home{
+  /*
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 136rpx;
+  height:40rpx;
+  line-height: 40rpx;
+  padding: 0 10rpx;
+  text-align: center;
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 20rpx;
+  color: #fff;
+  box-sizing: border-box;
+  */
+}
+.live-order{
+  position: relative;
+  width: 100%;
+  height: 422rpx;
+  text-align: center;
+  padding: 100rpx 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+.live-end-tip{
+  width: 100%;
+  height: 422rpx;
+  line-height: 422rpx;
+  text-align: center;
+  color: #fff;
+}
+.live-open{
+  font-size: 34rpx;
+}
+.live-time{
+  font-size: 30rpx;
+}
+.live-btn{
+  position: absolute;
+  bottom: 60rpx;
+  left: 50%;
+  margin-left: -76rpx;
+}
+.live-btn button{ 
+  width: 152rpx;
+  height: 52rpx;
+  padding: 0;
+  line-height: 52rpx;
+  border-radius: 26rpx;
+  background-color: #C0A45B;
+  color: #fff;
+  font-size:26rpx;
+  z-index: 10;
+}
+.back-home cover-image{
+  width: 136rpx;
+  height:44rpx;
+  margin-right: 10rpx;
+  margin-bottom: -2rpx;
+}
+.appointment{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -295rpx;
+  margin-top: -278rpx;
+  width: 590rpx;
+  height: 556rpx;
+  padding: 60rpx 0;
+  border-radius:6rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color: #333;
+  box-sizing: border-box;
+}
+.back-home .appoint-icon{
+  width: 176rpx;
+  height: 176rpx;
+  margin: 0 auto;
+}
+.appoint-txt{
+  color: #999;
+}
+.appoint-btn{
+  width: 350rpx;
+  height: 78rpx;
+  margin: 40rpx auto 0 auto;
+  line-height: 78rpx;
+  text-align: center;
+  border-radius: 39rpx;
+  background-color: #C0A45B;
+  color: #fff;
+}
+
+.opt-video{
+  position: absolute;
+  right: -22rpx;
+  bottom: 0;
+}
+.collection{
+  width: 36rpx;
+  height:36rpx;
+  margin: 0 auto 20rpx auto;
+}
+.share{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 152rpx;
+  height:44rpx;
+  line-height: 44rpx;
+  padding:0 20rpx;
+  text-align: center;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 22rpx;
+  box-sizing: border-box;
+}
+.share cover-image{
+  width: 20rpx;
+  height:20rpx;
+  margin-right: 10rpx;
+}
+
+
+.menu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  box-shadow: 0 2px 4px 0 rgba(188,188,188,0.50);
+}
+.menu text{
+  flex: 1;
+  text-align: center;
+}
+.menu-current{
+  color: #C0A45B;
+  border-bottom: 4rpx solid #C0A45B;
+}
+
+.lecturer{
+  padding: 20rpx 30rpx;
+}
+.lec-header{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 30rpx 0 20rpx 0;
+}
+.lec-header text{
+  margin: 0 10rpx;
+}
+.lec-header image{
+  width: 36rpx;
+  height: 6rpx;
+}
+.lec-cont{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.lec-head{
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+}
+.lec-name{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+}
+.lec-name text:last-child{
+  color: #999;
+}
+.lec-pro{
+  line-height: 1.6;
+  font-size: 26rpx;
+  color: #999;
+}
+.course-detail-info{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.look-more{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  color: #C0A45B;
+}
+.lec-more{
+  width: 20rpx;
+  height: 20rpx;
+}
+.lec-header .lec-more{
+  width: 20rpx;
+  height: 20rpx;
+}
+.obtain-more{
+  position: absolute;
+  right: 30rpx;
+  font-size: 24rpx;
+  color: #bcbcbc;
+}
+
+.set-top{
+  position: fixed;
+  bottom: 38rpx;
+  right: 30rpx;
+}
+.set-top image{
+  width: 66rpx;
+  height: 66rpx;
+}
+
+.ppt-info{
+  display: flex;
+  flex-direction: row;
+}
+.ppt{
+  width: 100%;
+  height: 332rpx;
+  padding: 10rpx 0 30rpx 0;
+}
+.ppt-cont{
+  position: relative;
+  flex-shrink: 0;
+  width: 590rpx;
+  height: 332rpx;
+  margin-right: 30rpx;
+  overflow: hidden;
+}
+.ppt-info::after{
+  content: '';
+  padding: 0rpx;
+}
+.ppt-cont ppt-img{
+  width: 100%;
+  height: 100%;
+}
+.sort-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx;
+  width: 88rpx;
+  height: 36rpx;
+  font-size: 20rpx;
+  letter-spacing: 2rpx;
+  color: #fff;
+}
+.sort-info text{
+  position: relative;
+  z-index: 9;
+}
+.sort-info image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.anth-items{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 80rpx;
+  font-size: 26rpx;
+}
+.anth-date{
+  font-size: 24rpx;
+  color: #999;
+}
+.anth-title.current{
+  color: #C0A45B;
+}
+.live-anth-items{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-between;
+  width: 100%;
+  height: 120rpx;
+  padding: 20rpx 0;
+  font-size: 24rpx;
+  box-sizing: border-box;
+}
+.live-content{
+  display: inline-block;
+}
+.live-title{
+  font-size: 26rpx;
+}
+.live-icon{
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align:top;
+}
+.live-current{
+  color: #C0A45B;
+}
+.live-end{
+  color: #999;
+}
+.live-date{
+  color: #999;
+}
+.live-time-icon{
+  display: inline-block;
+  vertical-align: middle;
+  margin: -4rpx 0 0 0;
+  width: 24rpx;
+  height: 24rpx;
+}
+.living{
+  width: 100rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  text-align: center;
+  border: 1px solid #C0A45B;
+  border-radius: 18rpx;
+  color: #C0A45B;
+  font-size: 20rpx;
+}
+
+.tip{
+  width: 100%;
+  height: 422rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.state-tip{
+  width: 184rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  color: #fff;
+}
+
+

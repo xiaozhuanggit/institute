@@ -1,0 +1,13 @@
+/* pages/success/success.wxss */
+
+.success{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200rpx;
+}
+.success-icon{
+  width: 300rpx;
+  height: 300rpx;
+}

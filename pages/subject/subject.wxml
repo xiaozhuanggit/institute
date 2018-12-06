@@ -1,0 +1,67 @@
+
+<view class="progress p-h15">
+  <view class='progress-info'>
+    <text class='sort'>{{index}}/{{list.length}}</text>
+    <view class='progress-bc'>
+      <view class='progress-bar'></view>
+    </view>
+  </view>
+  <text class='time'>{{showTime}}</text>
+</view>
+
+<view class='subject p-h15 mt-20' bindtap='seltSingle'>
+  <view class='subject-cont'>2. 高效能人士的七个习惯 时光的最佳之处，在于其长度。这句话用来形容以下哪个观点？(单选）</view>
+  <label class='select-items mt-20'>
+    <image class='radio-icon' data-id='1' src='/images/xuanzhong.png'></image>
+    <text>理智</text>
+  </label>
+
+  <label class='select-items mt-20'>
+    <image class='radio-icon' data-id='2' src='/images/weixuan.png'></image>
+    <text>商物流、餐饮、企业集团、生产制造等多个行业领域，年实战经曾就职于全国A级设计公司</text>
+  </label>
+
+  <label class='select-items mt-20'>
+    <image class='radio-icon' data-id='3' src='/images/weixuan.png'></image>
+    <text>坚持</text>
+  </label>
+
+  <label class='select-items mt-20'>
+    <image class='radio-icon' data-id='4' src='/images/weixuan.png'></image>
+    <text>执着</text>
+  </label>
+
+</view>
+
+
+<view class='selt-subject border5'>
+  <view class='selt-child'>
+    <view class='prev' bindtap='seltPrev' hidden='{{!showPrev}}'>
+      <image src='/images/shang@2x.png'></image>
+      <text>上一题</text>
+    </view>
+  </view>
+  
+  <view class='selt-child'><view class='submit border5' bindtap='showSubmit'>提交 <view class='leftBorder'></view></view></view>
+
+  <view class='selt-child'>
+    <view class='next border5' bindtap='seltNext' hidden='{{!showNext}}'>
+      <text>下一题</text>
+      <image src='/images/back@2x.png'></image>
+      <view class='leftBorder'></view>
+    </view>
+  </view>
+  
+  <view class='topBorder'></view>
+</view>
+
+
+<view class='cover' hidden='{{!showSub}}'>
+  <view class='frame'>
+    <view class='frame-cont border5'>确定要重新练习？<view class='bottomBorder'></view></view>
+    <view class='frame-btn'>
+      <view class='cancel-btn' bindtap='cancelSub'>取消</view>
+      <view class='sure-btn border5' bindtap='sureSubmit'>确定<view class='leftBorder'></view></view>
+    </view>
+  </view>
+</view>

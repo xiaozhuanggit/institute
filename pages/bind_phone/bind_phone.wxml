@@ -1,0 +1,40 @@
+<!--pages/bind_phone/bind_phone.wxml-->
+<view>
+  <view class='header'>
+    <image class='logo-bc' src='/images/logo_bc.png'></image>
+    <image class='logo' src='/images/logo.png'></image>
+  </view>
+  <view class='bind-info'>
+
+    <view class='cont-items border5'>
+      <image class='cont-icon' src='/images/phone.png'></image>
+      <input class='cont-entry' placeholder-class='ph-color' type='text' value='{{phone}}' bindinput='entryPhone' placeholder='请输入手机号'></input>
+      <image class='clear' hidden='{{!showClear}}' bindtap='clearPhone' src='/images/clear.png'></image>
+      <view class='bottomBorder'></view>
+    </view>
+    <view class='cont-items border5'>
+      <image class='cont-icon' src='/images/qrcode.png'></image>
+      <input class='cont-entry' placeholder-class='ph-color' type='text' value='{{code}}' bindinput='entryCode' placeholder='请输入验证码'></input>
+      <button class='getcode' disabled='{{repeat}}' bindtap='getCode'>{{code_tip}}</button>
+      <view class='bottomBorder'></view>
+    </view>
+    <view class='cont-items border5'>
+      <image class='cont-icon' src='/images/recode.png'></image>
+      <input class='cont-entry' placeholder-class='ph-color' type='text' value='{{recode}}' bindinput='entryRecode' placeholder='推荐码(可不填）'></input>
+      <view class='bottomBorder'></view>
+    </view>
+
+  </view>
+
+
+  <view class='sure-btn'>
+    <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">确定</button>
+  </view>
+
+  <button hidden='true' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+
+  <view class='tip-info' hidden='{{!show_error}}'>
+    <text>{{tipTxt}}</text>
+  </view>
+
+</view>

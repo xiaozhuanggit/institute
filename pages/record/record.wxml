@@ -1,0 +1,28 @@
+<!--pages/record/record.wxml-->
+<!--pages/collection/collection.wxml-->
+<view class='p-h15'>
+
+    <view class="carousel-item bc-w p-h15 mt-10" wx:for="{{courseList}}" data-id="{{item.courseId}}" bindtap='goToRecord'>
+      <view class="cur-info">
+        <image class="cur-icon" src='/images/default_head.png'></image>
+        <text>{{item.courseTitle}}</text>
+      </view>
+      <image class="carousel-img" src="{{item.courseImage}}"></image>
+      <view class="carousel-edit">
+        <view class="edit">
+          <image class="edit-icon" src='/images/time.png'></image>
+          <text>{{item.currentTime}}</text>
+        </view>
+        
+        <view class="timed">
+          <text>已学习{{item.currentTime}}s</text>
+        </view>
+      </view>
+    </view>
+
+</view>
+
+<import src="../../template/template.wxml"/>
+<view hidden="{{courseList.length?true:false}}">
+  <template is="non"  data="{{...non}}"></template>
+</view>

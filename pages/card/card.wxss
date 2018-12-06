@@ -1,0 +1,149 @@
+.section-fixed{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.hide-canvas{
+  position: absolute;
+  z-index: -1;
+  left: 3000px;
+}
+
+.content{
+  position: relative;
+  padding: 30rpx 30rpx 0;
+  background-color: #fff;
+}
+.dec{
+  padding: 36rpx 30rpx 30rpx 30rpx;
+  background-color: #fff;
+  font-size: 24rpx;
+  color: #b2b2b2;
+}
+.line-57{
+  line-height: 114rpx;
+}
+
+.item-two{
+  padding-right: 120rpx;
+}
+.mark{
+  margin-top: 36rpx;
+  font-size: 24rpx;
+}
+.mark-tip{
+  display: inline-block;
+  width: 90rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+  border-radius:18rpx;
+  color: #fff; 
+  text-align: center;
+}
+.code{
+  position: absolute;
+  right: 30rpx;
+  bottom: 0;
+}
+.share{
+  display: inline-block;
+}
+
+.evaluate{
+  display: flex;
+  height: 100rpx;
+  line-height: 100rpx;
+  flex-direction: row;
+  background-color: #fff;
+  padding: 20rpx 0;
+}
+.child-3{
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  border-right:1px solid #eee; 
+}
+.child-3:last-child{
+  border-right:1px solid #fff; 
+}
+
+.flex-wrp{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  height: 2.9rem;
+  background-color: #fff;
+}
+.flex-item{
+ width: 5rem;
+ border: 1px solid #eee;
+ margin-left:-1px; 
+ text-align: center;
+ line-height: 2.9rem;
+ padding:8rpx 0;
+
+}
+.flex-item:last-child{
+ flex: 1;
+ color: #fff;
+ background-color: #70AA39;
+ border: 1px solid #70AA39;
+ font-size: 32rpx;
+ line-height: 2.7rem;
+}
+.icon{
+  display: block;
+  margin: 0 auto;
+  width: 1rem;
+  height: 1rem;
+}
+.icon-add{
+  width: 28rpx;
+  height:28rpx;
+  float: left;
+  margin-right: 10rpx;
+}
+.item-txt{
+  margin-top: 10rpx;
+  display: block;
+  text-align: center;
+  font-size: 24rpx;
+  line-height:1;
+}
+
+.more-dec{
+  background-color: #fff;
+  padding: 28rpx 30rpx;
+  display: flex;
+}
+.more-txt{
+  width: 100rpx;
+  display: inline-block;
+}
+.more-info{
+  margin-left: 20rpx;
+}
+.show-img{
+  width: 100%;
+}
+
+.whole-btn{
+  font-size: 34rpx; 
+}
+.half-btn{
+  flex: 1;
+  font-size: 34rpx;
+}
+.w-15{
+  width: 30rpx;
+}
+.block{
+  height: 110rpx;
+}
+.qrCode{
+  position: absolute;
+  top: -1000px;
+}
+

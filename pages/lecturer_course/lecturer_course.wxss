@@ -1,0 +1,58 @@
+/* pages/lecturer_course/lecturer_course.wxss */
+@import "/template/template.wxss";
+.lec-info{
+  position: relative;
+}
+.lecturer{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: left;
+  height: 300rpx;
+  overflow: hidden;
+  color: #fff;
+}
+.lec-name{
+  margin-right: 40rpx;
+}
+.pro-desc{
+  display: inline-block;
+  font-size: 26rpx;
+  line-height: 1.6;
+}
+.lec-bc{
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  min-width: 105%;
+  min-height: 105%;
+  z-index: -1;
+  filter:blur(5px);
+}
+.vague{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.15);
+  z-index: -1;
+}
+.lec-head{
+  position: absolute;
+  bottom: -64rpx;
+  right: 72rpx;
+  width: 128rpx;
+  height: 128rpx;
+  border: 2rpx solid #C0A45B;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.lec-head image{
+  width: 100%;
+  height: 100%;
+}
+.lec-course{
+  margin-top: 90rpx;
+}

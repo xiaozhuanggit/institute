@@ -1,0 +1,152 @@
+/* pages/credit/credit.wxss */
+
+.credit{
+  position: relative;
+  width: 100%;
+  height: 464rpx;
+  background-color: #C0A45B;
+  color: #fff;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.credit-bc{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.credit-rule{
+  position: absolute;
+  top: 40rpx;
+  right: -30rpx;
+  width: 210rpx;
+  height:64rpx;
+  line-height: 64rpx;
+  text-align: center;
+  font-size: 26rpx;
+  border-radius: 32rpx;
+  overflow: hidden;
+}
+.rule-bc{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.2;
+}
+.credit-rule text{
+  opacity: 1;
+}
+.credit-rule image{
+  display: inline-block;
+  width: 26rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  margin: -4rpx 0 0 6rpx;
+}
+.credit-level{
+  position: relative;
+}
+.credit-level text{
+  display: inline-block;
+  vertical-align: top;
+}
+.credit-level image{
+  position:absolute;
+  left: 50%;
+  margin-left: -94rpx;
+  width: 184rpx;
+  height: 166rpx;
+  
+}
+.credit-num{
+  text-align: center;
+  margin-top: 180rpx;
+}
+.progress{
+  position: relative;
+  width: 100%;
+  height: 10rpx;
+  border-radius: 6rpx;
+  overflow: hidden;
+  
+}
+.bar-bc{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.4;
+}
+.bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 1;
+}
+.level-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  
+}
+.level-section text:first-child{
+  opacity: 0.5;
+}
+.level-section text:last-child{
+  opacity: 0.5;
+}
+.credit-tip{
+  text-align: center;
+  font-size: 24rpx;
+  opacity: 0.5;
+}
+
+.detailed-tit{
+  padding:0 0 10rpx 0;
+  font-size: 34rpx;
+}
+
+.non-detail{
+  margin-top: 120rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 26rpx;
+  color: #666;
+}
+.non-detail image{
+  width: 250rpx;
+  height: 210rpx;
+}
+
+.detailed-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.detailed-info{
+  font-size: 26rpx;
+}
+.detailed-info view:last-child{
+  font-size: 24rpx;
+  color: #999;
+}
+.detailed-num{
+  font-size: 13px;
+  color: #C0A45B;
+}

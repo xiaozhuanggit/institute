@@ -1,0 +1,56 @@
+<!--pages/credit/credit.wxml-->
+<view class="credit">
+  <image class='credit-bc' src='/images/credit.png'></image>
+  <view class="credit-rule" bindtap='goToRule'>
+    <view class="rule-bc"></view>
+    <text>学力规则</text>
+    <image src='/images/morer.png'></image>
+  </view>
+  <view class="credit-level">
+    <text>LV.{{studyInfo.level}} {{studyInfo.levelName}}</text>
+    <image src='/images/level_icon.png'></image>
+  </view>
+  <view class="credit-num">我的学力:{{walletInfo.virtualCoin}}</view>
+  <view class="credit-pro mt-15">
+    <view class="progress">
+      <view class='bar-bc'></view>
+      <view class="bar" style='width:{{(((studyInfo.credit-studyInfo.studyLevelList[0].studyLevelValue)/(studyInfo.studyLevelList[1].studyLevelValue-studyInfo.studyLevelList[0].studyLevelValue))*100)+"%"}}'></view>
+    </view>
+    <view class="level-section mt-5">
+      <text>{{studyInfo.studyLevelList[0].studyLevelValue}}</text>
+      <text>{{studyInfo.credit}}</text>
+      <text>{{studyInfo.studyLevelList[1].studyLevelValue}}</text>
+    </view>
+  </view>
+  <view class="credit-tip mt-5">距离LV.{{studyInfo.level+1}}还差{{studyInfo.studyLevelList[1].studyLevelValue-studyInfo.credit}}学力，互动、学习课程可增加学力哦~</view>
+  
+</view>
+
+<view class="p-h15 mt-15">
+  <view class="detailed-tit">学力明细</view>
+  <view class='non-detail'>
+    <image src='/images/non_detail.png'></image>
+    <view class='mt-10'>暂无学力明细~</view>
+  </view>
+  <view class="detailed-cont" hidden='true'>
+    <view class="detailed-item border5">
+      <view class="detailed-info">
+        <view>私链接圈回复主题</view>
+        <view class='mt-5'>2018-05-31</view>
+      </view>
+      <view class="detailed-num">558</view>
+      <view class='bottomBorder'></view>
+    </view>
+
+    <view class="detailed-item border5">
+      <view class="detailed-info">
+        <view>私链接圈回复主题</view>
+        <view class='mt-5'>2018-05-31</view>
+      </view>
+      <view class="detailed-num">558</view>
+      <view class='bottomBorder'></view>
+    </view>
+
+  </view>
+</view>
+

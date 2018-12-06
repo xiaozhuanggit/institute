@@ -1,0 +1,40 @@
+<!--pages/shopping/shopping.wxml-->
+
+<view class="search bc-w" hidden='{{true}}'>
+  <image class="search-icon" src='/images/sousuo@2x.png'></image>
+  <input type='text' placeholder='输入你想要的商品'></input>
+</view>
+
+<view class="scroll-content">
+  <view class="tab-content">
+    <view class="tab" style='height:{{(windowHeight)}}px'><!--height:{{(windowHeight-114*ratio)}}px-->
+      <block wx:for="{{group}}">
+        <view class="tab-list border5 {{selectIndex==index?'current':''}}" data-id="{{index}}" bindtap='switchTab'>
+          <text class='one-ellipsis'>{{item.commGroupTitle}}</text>
+          <view class="bottomBorder"></view>
+        </view>
+      </block>
+
+    </view>
+
+    <view class="non-goods bc-w" hidden='{{allCommList[(selectIndex)].length>0?true:false}}' style='height:{{(windowHeight)}}px'>
+      <image src='/images/zanwushangpin@2x.png'></image>
+      <view class='mt-10'>暂无商品~</view>
+    </view>
+    <scroll-view class="product" hidden='{{allCommList[(selectIndex)].length>0?false:true}}' scroll-y style='height:{{(windowHeight)}}px' bindscrolltolower="getGoodsMore"><!--height:{{(windowHeight-114*ratio)}}px-->
+      <block wx:for="{{allCommList[(selectIndex)]}}">
+        <view class="goods border5 bc-w" data-id="{{item.comm_id}}" bindtap='goToDetail'>
+          <image class="goods-img" src='{{item.comm_image}}'></image>
+          <view class="goods-info ml-10">
+            <view class="goods-title ellipsis">{{item.comm_name}}</view>
+            <view class="goods-money">{{item.virtual_price}}学力</view>
+          </view>
+          <view class="bottomBorder"></view>
+        </view>
+      </block>
+      
+    </scroll-view>
+
+  </view>
+
+</view>

@@ -1,0 +1,16 @@
+.whole-entry{
+  display: inline-block;
+  width: 100%;
+}
+.title-name{
+  display: inline-block;
+  width: 120rpx;
+}
+.obtain-btn{
+  border: none;
+  outline: none;
+  background-color: transparent !important;
+}
+.obtain-btn::after{
+  border: none;
+}

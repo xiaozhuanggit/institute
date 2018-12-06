@@ -1,0 +1,56 @@
+<view class="section">
+  <!--顶部排序和搜索-->
+  <view class="center-2 flex bc-w  default-h p-10  bottom-border">
+    <!--排序-->
+    <view class="border-r flex  flex-center just-center flex-1" hidden='{{showSearch}}'>
+      <view class="flex flex-center">
+        <image class="icon icon-txt square-16 " src="/images/sort.png"></image>
+        <text class="line-16 ml-5">按姓名</text>
+      </view>
+    </view>
+    
+
+    <view class="flex  flex-center just-center flex-1" hidden='{{showSearch}}' bindtap='entrySearch'>
+      <view class="flex flex-center">
+        <image class="icon icon-txt square-16 " src="/images/search.png"></image>
+        <text class="line-16 ml-5">搜索</text>
+      </view>
+    </view>
+
+
+    <!--搜索-->
+    <view class="flex flex-center just-center just-between flex-1" hidden='{{!showSearch}}'>
+      <view class="flex flex-center flex-1">
+        <image class="icon icon-txt square-16 " src="/images/search.png"></image>
+        <text class="line-16 ml-5" wx:if="{{showSort}}">搜索</text>
+        <input class="all-width overflow line-16 ml-5" auto-focus="true" placeholder="搜索" bindinput="bindSearch" value="{{keyword}}"  />
+      </view>
+      <text  bindtap="cancelSearch">取消</text>
+    </view>
+  </view>
+
+  <!--名片列表-->
+    <view>
+      <block wx:for="{{cardList}}">
+        <text class="f-10 h-20 pl-10">{{index}}</text>
+        <view class="border5 bc-w con-info">
+          <view class='topBorder'></view>
+          <block wx:for="{{item}}" wx:for-item="lineList">
+            <view class="info-list flex border5" >
+              <view class="flex flex-1" id="{{lineList.business_card_id}}" bindtap="goToCard">
+                <image class="info-head square-46" src="{{lineList.photo_url}}" ></image>
+                <view class="info-txt flex-1 flex-dir just-center">
+                  <text class="txt-up f-15">备注 || 姓名</text>
+                  <text class="txt-down c-c9 f-12">公司名</text>
+                </view>
+              </view>
+              <image class="info-icon square-16 " src="/images/phone.png"></image>
+              <view class='bottomBorder'></view>
+            </view>
+          </block>
+          <view class='bottomBorder'></view>
+        </view>
+      </block>
+    </view>
+
+</view>

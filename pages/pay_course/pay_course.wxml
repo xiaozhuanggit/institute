@@ -1,0 +1,30 @@
+<!--pages/pay_course/pay_course.wxml-->
+<view class="menu border5 bc-w">
+  <text class='{{currentTab==1?"menu-current":""}}' data-id="1" bindtap='switchTabs'>已购买的课程</text>
+  <text class='{{currentTab==1?"":"menu-current"}}' data-id="2" bindtap='switchTabs'>已付费的直播</text>
+  <view class='bottomBorder'></view>
+</view>
+
+<view id="1" hidden='{{currentTab==1?false:true}}'>
+  <import src="../../template/template.wxml"/>
+  <block wx:for="{{courseList}}">
+    <template is="product" data="{{...item}}"></template>
+  </block>
+
+  <view hidden="{{courseList.length?true:false}}">
+    <template is="non"  data="{{...non}}"></template>
+  </view>
+
+</view>
+<view id="2" hidden='{{currentTab==1?true:false}}'>
+
+  <import src="../../template/template.wxml"/>
+  <block wx:for="{{courseList}}">
+    <template is="product" data="{{...item}}"></template>
+  </block>
+
+  <view hidden="{{courseList.length?true:false}}">
+    <template is="non"  data="{{...non}}"></template>
+  </view>
+
+</view>

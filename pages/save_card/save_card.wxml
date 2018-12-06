@@ -1,0 +1,27 @@
+<!--pages/save_card/save_card.wxml-->
+<view class="card">
+  <view class="card-cont"  bindlongtap='saveImg'>
+    <image src='{{scanvasImg}}'></image>
+    <canvas class="draw-card" canvas-id='card'></canvas>
+  </view>
+  <view class='bc-select bc-w'>
+    <view class='card-tip'>长按上图保存邀请卡发送给好友</view>
+    <view class='card-bc mt-10'>
+
+
+
+      <view class='bc-items' wx:for="{{5}}" data-id="{{index}}" bindtap='selectCard'>
+        <image src='/images/{{index+1}}@2x.png'></image>
+        <view class="select-state" hidden='{{current!=index}}'>
+          <image src='/images/carded.png'></image>
+        </view>
+      </view>
+      
+
+    </view>
+  </view>
+</view>
+
+<view class='save-tip' hidden='{{!showSave}}'>
+  <view class='save-txt'>已保存到相册</view>
+</view>

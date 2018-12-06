@@ -1,0 +1,28 @@
+/* pages/mailList/mailList.wxss */
+
+.center-2{
+  box-sizing: border-box;
+}
+.icon-txt{
+  display: inline-block;
+  vertical-align:baseline;
+  /*
+  margin-bottom:-6rpx;
+  */
+
+}
+.con-info{
+  padding: 0 26rpx;
+}
+.info-list{
+  padding: 12rpx 0;
+}
+.info-txt{
+  padding: 0 10rpx;
+}
+.txt-down{
+  margin-top: 10rpx;
+}
+.info-icon{
+  margin-top: 30rpx;
+}

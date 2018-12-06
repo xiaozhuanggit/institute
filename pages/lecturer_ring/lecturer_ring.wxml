@@ -1,0 +1,12 @@
+<!--pages/lecturer_ring/lecturer_ring.wxml-->
+<view class='mt-10'>
+  <view class="goods p-h15">
+
+    <import src="../../template/template.wxml"/>
+    <block wx:for="{{courseList}}">
+      <template is="goods" data="{{...item}}"></template>
+    </block>
+
+  </view>
+
+</view>

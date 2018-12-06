@@ -1,0 +1,9 @@
+<!--pages/recommend/recommend.wxml-->
+<import src="../../template/template.wxml"/>
+<block wx:for="{{reCourseList}}">
+  <template is="product" data="{{...item}}"></template>
+</block>
+
+<view hidden="{{reCourseList.length?true:false}}">
+  <template is="non"  data="{{...non}}"></template>
+</view>

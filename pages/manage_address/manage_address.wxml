@@ -1,0 +1,43 @@
+<!--pages/manage_address/manage_address.wxml-->
+
+<block wx:for="{{addressList}}">
+  <view class="p-h15 bc-w mt-10">
+    <view class="address border5">
+      <view class="address-info">
+        <view class="receiver">
+          <text>{{item.consignee}}</text>
+          <text class='ml-10'>{{item.phone}}</text>
+        </view>
+        <view class="address-txt mt-5">
+          <text class="default" hidden='{{item.isDefault==1?false:true}}'>{{item.isDefault==1?'[默认]':''}}</text>
+          <text class="">{{item.area+item.addressDetail}}</text>
+        </view>
+      </view>
+      <image hidden='{{true}}' class="right-icon" src='/images/right.png'></image>
+      <view class="bottomBorder"></view>
+    </view>
+    <view class="address-edit">
+      <view data-id="{{item.addressId}}" bindtap='editAddress'>编辑</view>
+      <view data-id="{{item.addressId}}" data-index="{{index}}" bindtap='cancelModel'>删除</view>
+    </view>
+
+  </view>
+</block>
+
+<view class='cover' hidden='{{!modelShow}}'>
+  <view class="tip-model bc-w">
+    <view class='model-txt'>确认要放弃本次编辑？</view>
+    <view class='model-btn'>
+      <view class="model-cancel" bindtap='cancelBtn'>取消</view>
+      <view class="model-sure border5" bindtap='delAddress'>
+        <text>确定</text>
+        <view class='leftBorder'></view>
+      </view>
+    </view>
+  </view>
+</view>
+ 
+
+<view class="btn">
+  <button bindtap='addAddress'>添加收货地址</button>
+</view>

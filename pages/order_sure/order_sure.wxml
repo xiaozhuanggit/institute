@@ -1,0 +1,114 @@
+
+<view class="select-address p-h15 bc-w" hidden='{{(deliverType==0 || product.commType==2) ?true:false}}' data-id="{{defaultAdd.addressId}}" bindtap='goToEditAddress'>
+  <view class="address-info" hidden='{{defaultAdd?false:true}}' >
+    <view class="address-user">
+      <text>收件人：</text>
+      <text>{{defaultAdd.consignee}}</text>
+      <text class="user-phone ml-10">{{defaultAdd.phone}}</text>
+    </view>
+    <view class="address-content mt-5">
+      <text class="address-txt">收货地址：</text>
+      <text class='one-ellipsis'>{{defaultAdd.area+defaultAdd.addressDetail}}</text>
+    </view>
+  </view>
+  <view class="non-address" hidden='{{defaultAdd?true:false}}'>您还没有收货地址，点击这里添加~</view>
+  <image class="right-icon" src='/images/right.png'></image>
+</view>
+
+<view class='mt-10 bc-w'>
+  <view class="goods p-h15">
+    <view class="goods-img">
+      <image src='{{product.commImage}}'></image>
+    </view>
+    <view class="goods-info ml-10">
+      <view class="goods-title">{{product.commName}}</view>
+      <view class="goods-content">
+        <view class="goods-money">{{product.virtualPrice}}学力</view>
+        <view class="goods-num">
+          <view>仅剩{{product.commStock-product.saleNum}}件</view>
+          <view class="num-opt">
+            <text bindtap='setMinus'>-</text>
+            <text class="all-num">{{allNum}}</text>
+            <text bindtap='setPlus'>+</text>
+          </view>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="p-h15 bc-w mt-10">
+  <view class="key-value border5" hidden='{{product.commType==2 ?true:false}}'>
+    <view class="key">配送方式</view>
+    <view class="value " bindtap='showDeliver'>
+      <text class="de-address one-ellipsis">{{showDelivertxt}}</text>
+      <text>{{showDeliverType}}</text>
+      <image class="right-icon" src='/images/right.png'></image>
+    </view>
+    <view class="bottomBorder"></view>
+  </view>
+
+  <view class="key-value border5">
+    <view class="key">订单备注</view>
+    <view class="value">
+      <input type='text' placeholder='填写备注30字以内' bindinput='sriteRemarks' value='{{remark}}' maxlength="30"></input>
+      <image hidden='{{true}}' class="right-icon" src='/images/right.png'></image>
+    </view>
+    <view class="bottomBorder"></view>
+  </view>
+
+</view>
+
+<view class="footer-menu p-h15 bc-w">
+  <text>所需扣币:{{product.virtualPrice*allNum}}学力</text>
+  <button bindtap='saveExchange'>我要兑换</button>
+</view>
+
+<view hidden='{{!showDeliver}}' class="cover">
+  <view class="dispatch bc-w">
+    <view class="dispatch-title border5">
+      <view>配送方式</view>
+      <image class="cancel-btn right-icon" src='/images/Group@2x.png' bindtap='hideDeliver'></image>
+      <view class="bottomBorder"></view>
+    </view>
+    <view class="dispatch-list p-h15">
+
+      <view class="dispatch-item border5" data-id="0" hidden='{{address?false:true}}' bindtap='selectDeliver'>
+        <view class="dispatch-content">
+          <view class="dispatch-name">
+            <text class="since-txt">自提</text>
+            <text>[{{address.storeName}}]</text>
+          </view>
+          <view class="dispatch-address mt-5">
+            <text class="dispatch-address-txt"></text>
+            <text class="store-address ellipsis">地址：{{address.storeAddress}}</text>
+          </view>
+          <view class="dispatch-time mt-5">
+            <text class="dispatch-time-txt"></text>
+            <text class="store-time">营业时间：{{address.storeTime}}</text>
+          </view>
+        </view>
+        <image hidden='{{deliverType==0?false:true}}' class="selected right-icon" src='/images/selected_right@2x.png'></image>
+        <view class="bottomBorder"></view>
+      </view>
+
+      <view class="dispatch-item  logistics" data-id="1" bindtap='selectDeliver'>
+        <view class="logistics-goods">物流发货</view>
+        <image hidden='{{deliverType==0?true:false}}' class="selected right-icon" src='/images/selected_right@2x.png'></image>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<view class="cover" hidden='{{!showModelState}}'>
+  <view class="model bc-w">
+    <image class="state-icon" src='{{modelState.url}}'></image>
+    <view class="state-txt mt-10">{{modelState.state}}</view>
+    <view class="state-content mt-10">{{modelState.tip}}</view>
+    <view class="model-btn mt-20">
+      <button bindtap='closeTip'>我知道了</button>
+    </view>
+  </view>
+</view>

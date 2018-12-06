@@ -1,0 +1,105 @@
+/* pages/ranking/ranking.wxss */
+page{
+  background-color: #efeff4;
+}
+.ranking-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx 0;
+  background-color: #fff;
+}
+
+.ranking-time,.ranking-score{
+  flex: 1;
+  text-align: center;
+  color: #C0A45B;
+}
+.time-tit,.score-tit{
+  font-size: 26rpx;
+  color: #999;
+}
+
+.ranking-head{
+  position: relative;
+  width: 170rpx;
+  height: 170rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.head{
+  width: 120rpx;
+  height: 120rpx;
+  border: 1px solid #C0A45B;
+  border-radius: 50%;
+}
+.no{
+  position: absolute;
+  left: 0;
+  bottom: 14rpx;
+}
+.no image{
+  width: 170rpx;
+  height: 36rpx;
+}
+.no text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 170rpx;
+  height: 36rpx;
+  line-height: 42rpx;
+  text-align: center;
+  font-size: 10px;
+  color: #FFFFFF;
+}
+
+.rank-list{
+  background-color: #fff;
+}
+.rank-items{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 112rpx;
+  padding: 0 30rpx;
+}
+.user-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.user-info .head-pic{
+  width: 72rpx;
+  height: 72rpx;
+  border: 1px solid #C0A45B;
+  border-radius: 50%;
+  margin-left: 30rpx;
+}
+.nickname{
+  margin-left: 20rpx;
+}
+.user-info image{
+  width: 42rpx;
+  height: 52rpx;
+}
+.user-info .sort{
+  width: 42rpx;
+  text-align: center;
+}
+.rank-result{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 26rpx;
+}
+.all-time{
+  padding: 0 20rpx;
+}
+.all-score{
+  padding-left: 20rpx;
+}

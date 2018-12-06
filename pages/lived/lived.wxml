@@ -1,0 +1,53 @@
+<!--pages/lived/lived.wxml-->
+<view>
+  <live-player class="course" hidden="{{showVideo}}" src="{{currentVideo}}" mode="live" autoplay object-fit="contain" ></live-player>
+
+  <video id="course" class="course" src="{{currentVideo}}" custom-cache="{{false}}" reload = "auto" bindtimeupdate='recordPlayInfo' bindplay='clickPlayBtn' hidden="{{!showVideo}}"></video>
+
+</view>
+
+<view class=''>
+  <view class="menu border5 bc-w">
+    <text class='{{currentTab==1?"menu-current":""}}' data-id="1" bindtap='switchTabs'>简介</text>
+    <text class='{{currentTab==2?"menu-current":""}}' data-id="2" bindtap='switchTabs'>互动</text>
+    <view class='bottomBorder'></view>
+  </view>
+
+
+  <view id="1" hidden='{{currentTab==1?false:true}}'>
+
+    <view class="lecturer bc-w">
+      <view class="lec-header">
+        <image src='/images/t_l.png'></image>
+        <text>课程信息</text>
+        <image src='/images/t_r.png'></image>
+      </view>
+      <view class="lec-pro mt-10">
+        <text class="{{c_open_more?'':'course-detail-info'}}">{{livedInfo.channelAbout}}</text>
+        <view class="look-more mt-10" hidden='{{!showMore || c_open_more}}' bindtap='showMoreFont'>
+          <text>查看更多</text>
+          <image class="lec-more" src='/images/righted.png'></image>
+        </view>
+
+        <view class="look-more mt-10" hidden='{{!c_open_more}}' bindtap='hideMoreFont'>
+          <text>收起</text>
+        </view>
+        
+      </view>
+    </view>
+
+
+  </view>
+
+  <view id="2" hidden='{{currentTab==2?false:true}}'>暂无内容</view>
+  
+  
+</view>
+
+
+
+
+
+<view class="set-top" bindtap='pageToTop'>
+  <image src='/images/top.png'></image>
+</view>

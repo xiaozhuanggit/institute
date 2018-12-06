@@ -1,0 +1,43 @@
+
+<view class="topic-list border5" bindtap='goToPractice'>
+  <view class='topic-info'>
+    <image class='topic-img' src='/images/default_bc.png'></image>
+    <view class='topic-cont'>
+      <view class='topic-tit ellipsis'>如何成为一个优秀的销售人员 顶层领导</view>
+      <view class='topic-desc ellipsis mt-5'>关于商业模式C.V.S系统解读生产制造等多个行业领域，年实系统解读生产制造等多</view>
+    </view>
+  </view>
+  <view class='topic-data'>
+    <view class='people'>
+      <image class="people-icon" src='/images/renshu.png'></image>
+      <text>326人参与</text>
+    </view>
+    <view class='prac'>
+      <image class='prac-icon' src='/images/lianxi@2x.png'></image>
+      <text>未练习</text>
+    </view>
+  </view>
+  <view class='bottomBorder'></view>
+</view>
+
+<view class="topic-list border5" bindtap='goToPractice'>
+  <view class='topic-info'>
+    <image class='topic-img' src='/images/default_bc.png'></image>
+    <view class='topic-cont'>
+      <view class='topic-tit ellipsis'>如何成为一个优秀的销售人员 顶层领导</view>
+      <view class='topic-desc ellipsis mt-5'>关于商业模式C.V.S系统解读生产制造等多个行业领域，年实系统解读生产制造等多</view>
+    </view>
+  </view>
+  <view class='topic-data'>
+    <view class='people'>
+      <image class="people-icon" src='/images/renshu.png'></image>
+      <text>326人参与</text>
+    </view>
+    <view class='score'>最高得分:80分</view>
+    <view class='prac' hidden='true'>
+      <image class='prac-icon' src='/images/lianxi@2x.png'></image>
+      <text>未练习</text>
+    </view>
+  </view>
+  <view class='bottomBorder'></view>
+</view>

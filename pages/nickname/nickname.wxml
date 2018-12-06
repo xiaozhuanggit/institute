@@ -1,0 +1,13 @@
+<!--pages/nickname/nickname.wxml-->
+<view class="p-h15 bc-w">
+  <view class="key-value">
+    <view class="value">
+      <input type='text' placeholder='请填写昵称' value='{{nickname}}' bindinput='getNickname' ></input>
+    </view>
+    <image class="right-icon" src='/images/delete.png' bindtap='clearNickname'></image>
+  </view>
+</view>
+
+<view class="btn">
+  <button bindtap='saveUserInfo'>确定</button>
+</view>

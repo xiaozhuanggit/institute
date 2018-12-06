@@ -1,0 +1,35 @@
+<!--pages/person/person.wxml-->
+<view class="p-h15 bc-w mt-10">
+  <view class="key-value header border5" bindtap='uploadFiles'>
+    <view class="key">
+      <text>我的头像</text>
+    </view>
+    <view class="value">
+      <image class="head-img" src='{{uploadUrl}}'></image>
+    </view>
+    <image class="right-icon" src='/images/right.png'></image>
+    <view class="bottomBorder"></view>
+  </view>
+
+  <view class="key-value border5" bindtap='goToNickname'>
+    <view class="key">
+      <text>昵称</text>
+    </view>
+    <view class="value">
+      <input type='text' disabled='true' placeholder='请填写昵称' value='{{userInfo.nickname}}'></input>
+    </view>
+    <image class="right-icon" src='/images/right.png'></image>
+    <view class="bottomBorder"></view>
+  </view>
+
+  <view class="key-value border5" bindtap='goToAddress'>
+    <view class="key">
+      <text>收货地址</text>
+    </view>
+    <view class="value">
+      <image class="right-icon" src='/images/right.png'></image>
+    </view>
+    <view class="bottomBorder"></view>
+  </view>
+
+</view>

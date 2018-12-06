@@ -1,0 +1,267 @@
+<!--pages/course_detail/course_detail.wxml-->
+
+<view>
+  <video hidden='{{true}}' id="course" class="course" src="{{currentVideo}}" custom-cache="{{false}}" reload = "auto" controls  bindtimeupdate='recordPlayInfo' bindplay='clickPlayBtn' hidden="{{courseInfo.courseType==1?false:true}}">
+    <cover-view class="cover-info">
+      <cover-view class="back-home">
+        <cover-image src='/images/back_home.png' bindtap='goToHome' />
+        <!--
+        <cover-image src='/images/collection.png' />
+        <cover-view>回到首页</cover-view>
+        -->
+      </cover-view>
+      <cover-view class="opt-video">
+        <cover-image class="collection" src='{{is_collect?"/images/collectioned.png":"/images/collection.png"}}' bindtap='saveCollection' />
+        <cover-view class="share" data-id="{{course_id}}" bindtap='goToSaveCard'>
+          <cover-image src='/images/fenxiang@2x.png' /> 
+          <cover-view>赚8.88</cover-view>
+        </cover-view>
+      </cover-view>
+      
+    </cover-view>
+    <cover-view class="tip" hidden='{{!showTip}}'>
+      <cover-view class="state-tip">{{tipTxt}}</cover-view>
+    </cover-view>
+  </video>
+
+  <view>
+    <live-player class="course" src="{{currentVideo}}" mode="RTC" autoplay object-fit="contain" hidden="{{courseInfo.courseType==3 && channelType!=2 && isLive==1?false:true}}"></live-player>
+
+    <video class="course" src="{{currentVideo}}" custom-cache="{{false}}" reload = "auto" autoplay='true' controls="false"  bindtimeupdate='recordPlayInfo'  hidden="{{channelType==2 && isLive==1?false:true}}" duration="{{duration}}" bindended='liveEnd'></video>
+
+    <view class="back-home live-order" hidden='{{courseInfo.courseType==3 && isLive==2?false:true}}'>
+        <view class="live-open">
+          <view>{{anthTile}}</view>
+          <view class='live-time mt-10'>{{anthDate}}开播</view>
+        </view>
+        <view class="live-btn">
+          <form report-submit="true" bindsubmit="imAppointment">
+            <button formType="submit">立即预约</button>
+          </form>
+        </view> 
+
+        <view class="tip-cover" hidden='{{!appointment}}'>
+          <view class="appointment bc-w">
+            <image class="appoint-icon" src='/images/chenggong@2x.png'></image>
+            <view class="appoint-txt mt-10">预约成功</view>
+            <view class='mt-15'>请在{{anthDate}}观看</view>
+            <view class="appoint-btn" bindtap='knowAppointment'>我知道了</view>
+          </view>
+        </view>
+
+      </view> 
+      <view class="live-end-tip" hidden='{{courseInfo.courseType==3 && isLive==0?false:true}}'>直播已结束</view>
+
+  </view>
+  
+</view>
+
+<view class=''>
+  <view class="menu border5 bc-w">
+    <!--<text class='{{currentTab==1?"menu-current":""}}' data-id="1" bindtap='switchTabs'>讲师</text>-->
+    <!--<text class='{{currentTab==2?"menu-current":""}}' data-id="2" bindtap='switchTabs'>简介</text>
+    <text class='{{currentTab==3?"menu-current":""}}' data-id="3" bindtap='switchTabs' hidden='{{courseInfo.seriesType==2?false:true}}'>选集</text>
+    <text class='{{currentTab==4?"menu-current":""}}' data-id="4" bindtap='switchTabs' hidden='{{courseInfo.courseType==3?false:true}}'>互动</text>-->
+    <text class='{{currentTab==1 &&(courseInfo.seriesType==2 || courseInfo.courseType==3)?"menu-current":""}}' data-id="1" bindtap='switchTabs'>简介</text>
+    <text class='{{currentTab==2?"menu-current":""}}' data-id="2" bindtap='switchTabs' hidden='{{courseInfo.seriesType==2?false:true}}'>选集</text>
+    <text class='{{currentTab==3?"menu-current":""}}' data-id="3" bindtap='switchTabs' hidden='{{courseInfo.courseType==3?false:true}}'>互动</text>
+    <view class='bottomBorder'></view>
+  </view>
+
+  <!--<view id="1" hidden='{{currentTab==1?false:true}}'>
+
+    <view class="lecturer bc-w">
+      <view class="lec-header">
+        <image src='/images/t_l.png'></image>
+        <text>讲师认证信息</text>
+        <image src='/images/t_r.png'></image>
+      </view>
+      <view class="lec-cont">
+        <image class="lec-head" src='/images/default_head.png'></image>
+        <view class="lec-name" data-id="{{course_id}}" bindtap='goToSaveCard'>
+          <text>陈光俞</text>
+          <text>精智教育联合创始人</text>
+        </view>
+      </view>
+      <view class="lec-pro mt-10">
+        <text>独立运营设计工作室，6年以上网页设计经验，案例遍布电商物流、餐饮、企业集团、生产制造等多个行业领域，年实战经曾就职于全国A级设计公司</text>
+        <view class="look-more mt-10" hidden='{{!l_open_more}}'>
+          <text>查看更多</text>
+          <image class="lec-more" src='/images/righted.png'></image>
+        </view>
+        <view class="look-more mt-10" hidden='{{!l_open_more}}'>
+          <text>收起</text>
+        </view>
+        
+      </view>
+    </view>
+
+    <view class='mt-5 bc-w'>
+      <view class="lec-header">
+        <image src='/images/t_l.png'></image>
+        <text>讲师相关课程</text>
+        <image src='/images/t_r.png'></image>
+        <view class="obtain-more" bindtap='goToLecturerCourse'>
+          <text>更多</text>
+          <image class="lec-more" src='/images/right.png'></image>
+        </view>
+      </view>
+      <view class=''>
+        <import src="../../template/template.wxml"/>
+        <block wx:for="{{courseList}}">
+          <template is="product" data="{{...item}}"></template>
+        </block>
+      </view>
+      
+    </view>
+
+    <view class='mt-5 bc-w'>
+      <view class="lec-header">
+        <image src='/images/t_l.png'></image>
+        <text>讲师的圈子</text>
+        <image src='/images/t_r.png'></image>
+        <view class="obtain-more" bindtap='goToLecturerRing'>
+          <text>更多</text>
+          <image class="lec-more" src='/images/right.png'></image>
+        </view>
+      </view>
+      <view class='mt-10'>
+        <view class="goods p-h15">
+
+          <import src="../../template/template.wxml"/>
+          <block wx:for="{{courseList}}">
+            <template is="goods" data="{{...item}}"></template>
+          </block>
+
+        </view>
+
+      </view>
+      
+    </view>
+
+
+  </view>-->
+
+
+  <view id="1" hidden='{{currentTab==1?false:true}}'>
+
+    <view class="lecturer bc-w">
+      <view class="lec-header">
+        <image src='/images/t_l.png'></image>
+        <text>课程信息</text>
+        <image src='/images/t_r.png'></image>
+      </view>
+      <view class="lec-pro mt-10">
+        <text class="{{c_open_more?'':'course-detail-info'}}">{{courseInfo.courseProfile}}</text>
+        <view class="look-more mt-10" hidden='{{!showMore || c_open_more}}' bindtap='showMoreFont'>
+          <text>查看更多</text>
+          <image class="lec-more" src='/images/righted.png'></image>
+        </view>
+
+        <view class="look-more mt-10" hidden='{{!c_open_more}}' bindtap='hideMoreFont'>
+          <text>收起</text>
+        </view>
+        
+      </view>
+    </view>
+
+    <view class='mt-5 bc-w' hidden='{{true}}'>
+      <view class="lec-header">
+        <image src='/images/t_l.png'></image>
+        <text>课程PPT</text>
+        <image src='/images/t_r.png'></image>
+        
+      </view>
+      <view class='mt-5'>
+        <scroll-view class="ppt" scroll-x>
+          <view class='ppt-info p-h15'>
+            <view class='ppt-cont' wx:for="{{courseList}}">
+              <image class="ppt-img" src='{{item.course_image}}'></image>
+              <view class="sort-info">
+                <text>{{index+1}}/{{courseList.length}}</text>
+                <image src='/images/page.png'></image>
+              </view>
+            </view>
+            
+          </view>
+          
+        </scroll-view>
+      </view>
+      
+    </view>
+
+    <view class='mt-5 bc-w' hidden='{{reCourseList.length>0?false:true}}'>
+      <view class="lec-header">
+        <image src='/images/t_l.png'></image>
+        <text>相关课程推荐</text>
+        <image src='/images/t_r.png'></image>
+        <view class="obtain-more" bindtap='goToRecommend'>
+          <text>更多</text>
+          <image class="lec-more" src='/images/right.png'></image>
+        </view>
+      </view>
+      <view class=''>
+        <import src="../../template/template.wxml"/>
+        <block wx:for="{{reCourseList}}">
+          <template is="product" data="{{...item}}"></template>
+        </block>
+      </view>
+      
+    </view>
+
+
+  </view>
+
+
+
+  <view id="2" hidden='{{(currentTab==2 && courseInfo.courseType!=3)?false:true}}'>
+    <view class='bc-w p-h15'>
+      <view class="anth-items border5" wx:for="{{courseInfo.tvCourseSeriesList}}" data-id="{{index}}" bindtap='selectAnth'>
+        <view class="anth-title {{index==anthIndex?'current':''}}">{{item.courseTitle}}</view>
+        <view class="anth-date">{{item.courseDuration}}</view>
+        <view class='bottomBorder'></view>
+      </view>
+    </view>
+    
+
+  </view>
+
+  <view id="2" hidden='{{(currentTab==2 && courseInfo.courseType==3)?false:true}}'>
+    <view class='bc-w p-h15'>
+      <view class="live-anth-items border5" wx:for="{{courseInfo.tvCourseSeriesList}}" data-id="{{index}}" bindtap='selectLiveAnth'>
+        <view>
+          <image class="live-icon" src='{{item.isLive==0?"/images/live.png":"/images/lived.png"}}'></image>
+          <view class="live-content ml-10"> 
+            <view class="live-title {{item.isLive==0?'live-end':item.isLive==1?'live-current':''}}">第{{index+1}}节：{{item.courseTitle}}</view>
+            <view class="live-date mt-5">
+              <image class="live-time-icon" src='/images/live_time.png'></image>
+              <text class='ml-5'>{{item.startTime}} {{item.isLive==0?'已结束':''}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="living" hidden='{{item.isLive==1?false:true}}'>直播中</view>
+        
+        <!--
+        <view class="anth-title {{index==anthIndex?'current':''}}">{{item.courseTitle}}</view>
+        <view class="anth-date">{{item.courseDuration}}</view>
+        -->
+        <view class='bottomBorder'></view>
+      </view>
+    </view>
+    
+
+  </view>
+
+
+  <view id="3" hidden='{{currentTab==3?false:true}}'>暂无内容</view>
+  
+  
+</view>
+
+
+
+
+
+<view class="set-top" bindtap='pageToTop'>
+  <image src='/images/top.png'></image>
+</view>

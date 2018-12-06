@@ -1,0 +1,25 @@
+<view>
+  <view class="border5 pl-15 bc-w mt-20">
+    <view class='topBorder'></view>
+      <view class="flex flex-center border5 default-h  f-16">
+        <view class="title-name">手机号</view>
+        <input class="flex-1" placeholder="请输入手机号" bindinput="bindPhone" value="{{phoneNo}}"/>
+        <button class="mr-15 fl obtain-btn btn f-14" type="default">获取验证码</button>
+        <view class='bottomBorder'></view>
+      </view>
+      <view class="flex flex-center border5 default-h  f-16">
+        <view class="title-name">验证码</view>
+        <input class="flex-1" placeholder="短信或语音验证码" bindinput="bindCode" value="{{code}}"/>
+        <view class='bottomBorder'></view>
+      </view>
+    <view class='bottomBorder'></view>
+  </view>
+  <view wx:if="{{showTip}}" class="tip-cover flex-dir flex-center" >
+    <view class="tip b-radius-5 inline c-white bc-black p-10">
+      <text>{{tip}}</text>
+    </view>
+  </view>
+  <view class="p-15">
+      <button class="whole-btn bc-sub  mt-5" type="primary" bindtap="phoneBtn">确认</button>
+    </view>
+</view>

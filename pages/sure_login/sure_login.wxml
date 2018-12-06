@@ -1,0 +1,19 @@
+<!--pages/sure_login/sure_login.wxml-->
+
+<view class='screen border5'>
+  <view class='phone'>
+    <image class='phone-header' src='{{pushInfo.photoUrl}}'></image>
+    <view>{{pushInfo.phone}}</view>
+  </view>
+  <image class='to' src='/images/arrow.png'></image>
+  <image class='place' src='/images/screen.png'></image>
+  <view class='bottomBorder'></view>
+</view>
+
+<view class='login-tip'>云屏台账户登录确认</view>
+<view class='sure-btn'>
+  <button bindtap='setPushTv'>确定</button>
+</view>
+<view class='sure-btn cancel' hidden='true'>
+  <button>取消</button>
+</view>

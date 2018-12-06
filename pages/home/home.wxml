@@ -1,0 +1,121 @@
+
+<!--
+<view class="tab bc-w">
+  <view class="tab-content">
+    <text wx:for="{{themeList}}" data-id="{{item.theme_id}}" data-title="{{item.theme_title}}" bindtap='goToThemeCourse'>{{item.theme_title}}</text>
+  </view>
+</view>
+-->
+
+<view class="slide-info">
+  <swiper autoplay="{{autoplay}}" interval="{{interval}}" current="{{current}}" duration="{{duration}}" circular="true" bindchange="getCurrent">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item class="slide" data-id="{{item.theme_id}}" data-title="{{item.theme_title}}" bindtap='goToThemeCourse'>
+        <image src="{{item.theme_image}}" class="slide-image" width="100%" height="150"/>
+      </swiper-item>
+    </block>
+    
+  </swiper>
+
+  <view class="sequence">
+    <block wx:for="{{imgUrls}}">
+      <view class="{{index===current_icon?'current':''}} sequence-icon"></view>
+    </block>
+  </view>
+</view>
+
+<view wx:for="{{collegeCourseList}}" class="{{index!=0?'mt-10:':''}}">
+  <view class="more p-h15 bc-w">
+    <view class="more-title">
+      <text>{{item.college_name}}</text>
+      <image src='/images/dian@2x.png'></image>
+    </view>
+  </view>
+  <view class="college-cont bc-w">
+    <view class="college bc-w">
+      <image class="college-icon" src='{{item.college_image}}'></image>
+      <view class="college-info">
+        <view class="college-name">{{item.college_name}}</view>
+        <view class="college-video">视频<text>{{item.course_num}}</text></view>
+        <view class="college-fans">粉丝<text>{{item.people_num}}</text></view>
+      </view>
+      <view class="join-college" data-id="{{item.college_id}}" data-no="{{item.user_no}}"  bindtap='goToCollegeCourse'>进入学院</view>
+      
+    </view>
+    <view class="bottom-shadow"><view></view></view>
+  </view>
+  <view class='college-goods bc-w'>
+    <view class="goods p-h15">
+      <view class="goods-item bc-w " wx:for="{{item.courseList}}" wx:if="{{index<2}}" data-id="{{item.course_id}}" bindtap='goToPage'>
+        <view class="goods-pic">
+          <image class="goods-img" src='{{item.course_image}}'></image>
+          <view wx:if="{{item.course_type==3}}" class="live-sign">直播</view>
+          <view wx:if="{{item.series_type==2}}" class="series-chapter">更新至{{item.course_series_num || 1}}章</view>
+        </view>
+        
+        <view class="goods-info">
+          <view class='goods-title one-ellipsis'>{{item.course_title}}</view>
+          <view class="goods-cont mt-5">
+            <view class="goods-datas">
+              <view class="">
+                <image src='/images/guankan.png'></image>
+                <text class='ml-5'>{{item.click_num}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<view class="more p-h15 mt-10 bc-w">
+  <view class="more-title">
+    <text>品牌学院</text>
+    <image src='/images/dian@2x.png'></image>
+  </view>
+</view>
+<view class="college-brand bc-w">
+  <view class="college-item" wx:for="{{collegeList}}" data-id="{{item.college_id}}" data-no="{{userInfo.userNo}}"  bindtap='goToCollegeCourse'>
+    <image class="college-item-icon" src='{{item.college_image}}'></image>
+    <view class='mt-10'>{{item.college_name}}</view>
+  </view>
+  
+</view>
+
+<view class="more p-h15 mt-10 bc-w">
+  <view class="more-title">
+    <text>品牌企业大学</text>
+    <image src='/images/dian@2x.png'></image>
+  </view>
+</view>
+<view class="college-brand bc-w">
+  <view class="college-item" wx:for="{{brandCollege}}" data-id="{{item.college_id}}" data-no="{{userInfo.userNo}}"  bindtap='goToCollegeCourse'>
+    <image class="college-item-icon" src='{{item.college_image}}'></image>
+    <view class='mt-10'>{{item.college_name}}</view>
+  </view>
+  
+</view>
+
+
+
+
+
+<view class="more p-h15 mt-10 bc-w" bindtap='goToCourse'>
+  <view class="more-title">
+    <text>猜你喜欢</text>
+    <image src='/images/dian@2x.png'></image>
+  </view>
+  <view class="more-txt">
+    <text>更多</text>
+    <image src='/images/right.png'></image>
+  </view>
+</view>
+
+<import src="../../template/template.wxml"/>
+<block wx:for="{{courseList}}">
+  <template is="product" data="{{...item}}"></template>
+</block>
+
+

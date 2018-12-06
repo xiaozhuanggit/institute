@@ -1,0 +1,82 @@
+<view class="section">
+  <view class="bc-w">
+    <view class="header fl p-12">
+      <image class="header-img square-65" src="/images/a1.jpg"></image>
+    </view>
+    <view class="column pl-10">
+      <view class="show-txt bottom-border default-h  f-16">
+        <input placeholder="请输入姓名" bindinput="bindName" value="{{nickName}}"/>
+      </view>
+      <view class="editer">
+        <view class="show-txt default-h f-16 c-gray">
+          <input placeholder="请输入手机号" bindinput="bindPhone" value="{{phoneNo}}"/>
+        </view>
+        <view class="change-btn btn" bindtap="goToPhone">更改</view>
+      </view>
+    </view>
+  </view>
+
+  <!--公司信息-->
+    <view class="mt-20 bc-w pl-15">
+      <view class="show-txt bottom-border default-h  f-16">
+        <view class="title-name">公司<text class="must">*</text></view>
+        <input class="ml-40" placeholder="请输入公司名" bindinput="bindCompany" value="{{company}}"/>
+      </view>
+      <view class="show-txt bottom-border default-h  f-16">
+        <view class="title-name">职务<text class="must">*</text></view>
+        <input class="ml-40" placeholder="请输入职务" bindinput="bindJob" value="{{job}}"/>
+      </view>
+      <view class="show-txt default-h  f-16">
+        <view class="title-name">Email<text class="must"></text></view>
+        <input class="ml-40" placeholder="12345@qq.com" bindinput="bindEmail" value="{{email}}"/>
+      </view>
+    </view>
+    <!--了解更多-->
+    <view class="more mt-20">
+      <view class="more-dec">
+        <text class="more-txt">更多</text>
+        <view class="more-info">
+          <textarea bindblur="bindTextAreaBlur" maxlength="-1" auto-height placeholder="自动变高" bindinput="bindMore" value="{{profile}}" />
+        </view>
+      </view>
+    </view>
+
+    <!--上传图片-->
+    <view class="upload mt-20 bc-w">
+      <block wx:for="{{uploadUrls}}">
+        <view class="upload-info mr-10">
+          <image class="upload-img" src="{{oss+item}}"></image>
+          <view class="upload-icon" id="{{index}}"  bindtap="delUploadImg">
+            <image class="icon square-10" src="/images/delete.png"></image>
+          </view>
+        </view>
+      </block>
+
+      <view class="upload-info mr-10 disable-upload border-c" bindtap="uploadFiles">
+        <view class="cross square-40">
+          <view class="x-axis"></view>
+          <view class="y-axis"></view>
+        </view>
+      </view>
+    </view>
+
+    <!--获取地址-->
+    <view class="p-10 bc-w mt-20">
+      <view class="txt-center f-12">当前位置信息</view>
+      <view class="txt-center c-gray mt-10 f-12">{{address}}</view>
+      <view class="flex mt-15 clearfix">
+        <view class="center-btn  inline">
+          <button class="fl btn" type="default" bindtap="chooseLocation">选择</button>
+          <button class="fl ml-20 btn" type="default" bindtap="clearLocation">清空</button>
+        </view>
+      </view>
+    </view>
+
+    <!--保存-->
+    <form bindsubmit="formSubmit" report-submit="true">
+      <view class="p-15">
+        <button class="whole-btn bc-sub  mt-5" type="primary" formType="submit">保存</button>
+      </view>
+    </form>
+    
+</view>

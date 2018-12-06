@@ -1,0 +1,117 @@
+/* pages/bind_phone/bind_phone.wxss */
+
+.header{
+  position: relative;
+  width: 100%;
+  height: 360rpx;
+}
+.logo-bc{
+  width: 100%;
+  height: 100%;
+}
+.logo{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -31rpx;
+  margin-left: -141rpx;
+  width: 282rpx;
+  height: 62rpx;
+}
+.bind-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80rpx;
+}
+.cont-items{
+  position: relative;
+  width: 550rpx;
+  height: 100rpx;
+  
+}
+.cont-icon{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -11rpx;
+  width: 22rpx;
+  height: 30rpx;
+}
+.cont-entry{
+  width: 100%;
+  height: 100%;
+  padding-left: 50rpx;
+  outline: none;
+  border: none;
+}
+.ph-color{
+  color: #bcbcbc;
+}
+
+.clear{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -15rpx;
+  width: 30rpx;
+  height: 30rpx;
+  z-index: 10;
+}
+.getcode{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 26rpx;
+  color: #C0A45B;
+  z-index: 10;
+}
+
+button[disabled]{
+
+  color: #C0A45B !important;
+  background-color:transparent !important;
+
+}
+
+
+button::after{
+  border: none;
+}
+.sure-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 100rpx;
+}
+.sure-btn button{
+  width: 550rpx;
+  height: 78rpx;
+  background-color: #C0A45B;
+  color: #fff;
+  font-size: 30rpx;
+  outline: none;
+  border: none;
+  box-shadow: 0 2px 4px 0 #E2D4B4;
+  border-radius: 3px;
+}
+
+.tip-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 100rpx;
+}
+.tip-info text{
+  padding: 10rpx 30rpx;
+  background: #9A9A9A;
+  border-radius: 3px;
+  font-size: 26rpx;
+  color: #fff;
+}

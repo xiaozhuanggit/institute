@@ -1,0 +1,5 @@
+<!--pages/success/success.wxml-->
+<view class='success'>
+  <image class='success-icon' src='/images/success.png'></image>
+  <view class='mt-20'>登录成功</view>
+</view>

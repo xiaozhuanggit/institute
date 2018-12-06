@@ -1,0 +1,38 @@
+<view class="prac">
+  <view class="prac-info">
+    <view class="prac-tit ellipsis">教你如何成为一个优秀的销售人员教你如何成为一个优秀的销售人员</view> 
+    <view class='prac-score'>
+      <image class='score-bc' src='/images/beijing@2x.png'></image>
+      <view class='cur-score'>
+        <image src='/images/chengji@2x.png'></image>
+        <text>当前学习成绩</text>
+      </view>
+      <view class='socre mt-10'>0</view>
+    </view>
+    <view class='prac-cont'>
+      <image class='left-icon' src='/images/t_l.png'></image>
+      <text>习题内容</text>
+      <image class='right-icon' src='/images/t_r.png'></image>
+    </view>
+    <view class="prac-sort mt-15">
+      <view class="sort-tit">
+        <view class='sort-num'>
+          <image src='/images/shuliang@2x.png'></image>
+          <text>答题数量</text>
+        </view>
+        <view class='sort-time mt-10'>
+          <image src='/images/time@2x.png'></image>
+          <text>答题时间</text>
+        </view>
+      </view>
+      <view class='result'>
+        <view>10题</view>
+        <view class='mt-10'>5分钟</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='sub-btn'>
+  <button bindtap='goToSubject'>开始答题</button>
+</view>

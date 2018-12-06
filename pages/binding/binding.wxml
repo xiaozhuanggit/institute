@@ -1,0 +1,30 @@
+
+<view class="p-h15 bc-w mt-10">
+  <view class="key-value border5">
+    <view class="key">
+      <text>手机号：</text>
+    </view>
+    <view class="value">
+      <input type='text' placeholder='请填写手机号码' value='{{phone}}' bindinput='entryPhone'></input>
+    </view>
+    <image class="right-icon" hidden='{{true}}' src='/images/right.png'></image>
+    <view class="bottomBorder"></view>
+  </view>
+
+  <view class="key-value border5">
+    <view class="key">
+      <text>验证码：</text>
+    </view>
+    <view class="value">
+      <input type='text' placeholder='请填写验证码' value='{{code}}' bindinput='entryCode'></input>
+    </view>
+    <button class="code-btn" bindtap='getCode' disabled='{{repeat}}' >{{getInfo}}</button>
+    <image class="right-icon" hidden='{{true}}' src='/images/right.png'></image>
+    <view class="bottomBorder"></view>
+  </view>
+
+</view>
+
+<view class="btn">
+  <button bindtap='bindPhone'>保存</button>
+</view>

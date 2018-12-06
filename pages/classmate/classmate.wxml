@@ -1,0 +1,18 @@
+<!--pages/classmate/classmate.wxml-->
+<view class='p-h15'>
+  <view class="mate-list border5" wx:for="{{classMateList}}">
+    <view class="mate-head">
+      <image src='{{item.photo_url}}'></image>
+    </view>
+    <text class="nickname ml-10">{{item.nickname}}</text>
+    <text>30小时34分</text>
+    <view class='bottomBorder'></view>
+  </view>
+  
+</view>
+
+<import src="../../template/template.wxml"/>
+<view hidden="{{classMateList.length?true:false}}">
+  <template is="non"  data="{{...non}}"></template>
+</view>
+

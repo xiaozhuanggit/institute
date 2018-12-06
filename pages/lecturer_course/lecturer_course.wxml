@@ -1,0 +1,24 @@
+<!--pages/lecturer_course/lecturer_course.wxml-->
+<view class="lec-info">
+  <view class="lecturer p-h15">
+    <image class="lec-bc" src='/images/a1.jpg'></image>
+    <view class="vague"></view>
+    <view class="lec-pro">
+      <text class="lec-name">陈光俞</text>
+      <text>精智教育联合创始人</text>
+    </view>
+    <text class="pro-desc mt-10">独立运营设计工作室，6年以上网页设计经验，案例遍布电商物流、餐饮、企业集团、生产制造等多个行业领域，年实战经曾就职于全国A级设计公司</text>
+  </view>
+  <view class="lec-head">
+      <image src='/images/a1.jpg'></image>
+    </view>
+</view>
+
+<view class='lec-course'>
+  <import src="../../template/template.wxml"/>
+  <block wx:for="{{courseList}}">
+    <template is="product" data="{{...item}}"></template>
+  </block>
+</view>
+
+

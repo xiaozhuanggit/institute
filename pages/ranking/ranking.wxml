@@ -1,0 +1,80 @@
+
+
+<view class='ranking-info'>
+
+  <view class='ranking-time'>
+    <view class='time-tit'>答题用时</view>
+    <view class='mt-5'>03:20</view>
+  </view>
+
+  <view class='ranking-head'>
+    <image class='head' src='/images/default_bc.png'></image>
+    <view class='no'>
+      <image src='/images/paihang@2x.png'></image>
+      <text>No.50211</text>
+    </view>
+    
+  </view>
+
+  <view class='ranking-score'>
+    <view class='score-tit'>最高得分</view>
+    <view class='mt-5'>90分</view>
+  </view>
+
+</view>
+
+<view class='rank-list mt-10'>
+  <view class='rank-items border5'>
+    <view class='user-info'>
+      <image src='/images/paiming 1@2x.png'></image>
+      <image class='head-pic' src='/images/default_bc.png'></image>
+      <text class='nickname'>生如夏花</text>
+    </view>
+    <view class='rank-result'>
+      <text class='all-time'>02:16</text>
+      <view class='all-score border5'>100分<view class='leftBorder'></view></view>
+    </view>
+    <view class='bottomBorder'></view>
+  </view>
+
+  <view class='rank-items border5'>
+    <view class='user-info'>
+      <image src='/images/paiming 2@2x.png'></image>
+      <image class='head-pic' src='/images/default_bc.png'></image>
+      <text class='nickname'>生如夏花</text>
+    </view>
+    <view class='rank-result'>
+      <text class='all-time'>02:16</text>
+      <view class='all-score border5'>100分<view class='leftBorder'></view></view>
+    </view>
+    <view class='bottomBorder'></view>
+  </view>
+
+  <view class='rank-items border5'>
+    <view class='user-info'>
+      <image src='/images/paiming 3@2x.png'></image>
+      <image class='head-pic' src='/images/default_bc.png'></image>
+      <text class='nickname'>生如夏花</text>
+    </view>
+    <view class='rank-result'>
+      <text class='all-time'>02:16</text>
+      <view class='all-score border5'>100分<view class='leftBorder'></view></view>
+    </view>
+    <view class='bottomBorder'></view>
+  </view>
+
+  <view class='rank-items border5'>
+    <view class='user-info'>
+      <view class='sort'>3</view>
+      <image class='head-pic' src='/images/default_bc.png'></image>
+      <text class='nickname'>生如夏花</text>
+    </view>
+    <view class='rank-result'>
+      <text class='all-time'>02:16</text>
+      <view class='all-score border5'>100分<view class='leftBorder'></view></view>
+    </view>
+    <view class='bottomBorder'></view>
+  </view>
+
+</view>
+

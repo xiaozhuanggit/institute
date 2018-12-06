@@ -1,0 +1,99 @@
+/* pages/save_card/save_card.wxss */
+.card{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+}
+.card-cont{
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.card-cont canvas,.card-cont image{
+  display: inline-block !important;
+  width: 578rpx;
+  height: 814rpx;
+}
+.draw-card{
+  position: absolute;
+  bottom: -1000px;
+}
+.bc-select{
+  width: 100%;
+  height: 200rpx;
+  font-size: 24rpx;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+}
+.card-tip{
+  line-height: 1;
+  text-align: center;
+}
+.card-bc{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.bc-items{
+  position: relative;
+  width: 114rpx;
+  height: 114rpx;
+  border-radius: 6rpx;
+  margin: 0 15rpx;
+  flex-shrink:0;
+  overflow: hidden;
+}
+.bc-items:first-child{
+  margin: 0 15rpx 0 0;
+}
+.bc-items image{
+  width: 100%;
+  height: 100%;
+}
+.select-state{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.50);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.select-state image{
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.save-tip{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.save-txt{
+  padding: 0 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: -300rpx;
+  font-size: 26rpx;
+  color: #fff;
+  border-radius: 30rpx;
+  background-color: rgba(0,0,0,0.6);
+}

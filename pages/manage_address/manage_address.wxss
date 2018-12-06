@@ -1,0 +1,105 @@
+/* pages/manage_address/manage_address.wxss */
+page{
+  background-color: #efeff4;
+  padding-bottom: 118rpx;
+}
+
+.address{
+  width: 100%;
+  height: 144rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.address-txt{
+  font-size: 26rpx;
+  color: #999;
+}
+.default{
+  margin-right: 10rpx;
+  color: #C0A45B;
+}
+.right-icon{
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+  margin: -6rpx 0 0 10rpx; 
+}
+
+.address-edit{
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.address-edit view{
+  width: 110rpx;
+  height: 44rpx;
+  padding: 0;
+  line-height: 44rpx;
+  text-align: center;
+  margin-left: 40rpx;
+  border: 1px solid #C0A45B;
+  border-radius: 22rpx;
+  font-size: 26rpx;
+  color: #C0A45B;
+}
+
+.btn{
+  width: 100%;
+  position: fixed;
+  bottom: 40rpx;
+  left: 0;
+  
+}
+.btn button{
+  width: 350rpx;
+  height: 78rpx;
+  line-height: 78rpx;
+  background: #C0A45B;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+
+.cover{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.3);
+  z-index: 100;
+}
+.tip-model{
+  
+  width: 388rpx;
+  position: fixed;
+  top: 36%;
+  left: 50%;
+  margin-left: -194rpx;
+  z-index: 101;
+  border-radius: 6rpx;
+  font-size: 26rpx;
+}
+.model-txt{
+  width: 100%;
+  text-align: center;
+  height: 92rpx;
+  line-height: 92rpx;
+}
+.model-btn{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+  color: #C0A45B;
+
+}
+.model-btn view{
+  flex: 1;
+  text-align: center;
+}

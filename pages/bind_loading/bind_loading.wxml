@@ -1,0 +1,4 @@
+<!--pages/bind_loading/bind_loading.wxml-->
+<view class="loading">
+  <image src='/images/jiazai.gif'></image>
+</view>

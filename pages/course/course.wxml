@@ -1,0 +1,43 @@
+<!--pages/course/course.wxml-->
+<view >
+  <view class='bc-w'>
+    <view class="classification border5">
+      <view class="classification-items {{menuCurrent==1?'current':''}}" data-id="1" bindtap='selectMenu'>
+        <text>课程分类</text>
+        <image src='{{(menuCurrent==1 && showTag)?"/images/drop_uped.png":(menuCurrent==1 && !showTag)?"/images/drop_downed.png":"/images/drop_down.png"}}'></image>
+      </view>
+      <view class="classification-items border5  {{menuCurrent==2?'current':''}}" data-id="2" bindtap='selectMenu'>
+        <text>直播/点播</text>
+        <image src='{{(menuCurrent==2 && showTag)?"/images/drop_uped.png":(menuCurrent==2 && !showTag)?"/images/drop_downed.png":"/images/drop_down.png"}}'></image>
+        <view class='leftBorder'></view>
+      </view>
+      <view class="classification-items border5  {{menuCurrent==3?'current':''}}" data-id="3" bindtap='selectMenu'>
+        <text>讲师</text>
+        <image src='{{(menuCurrent==3 && showTag)?"/images/drop_uped.png":(menuCurrent==3 && !showTag)?"/images/drop_downed.png":"/images/drop_down.png"}}'></image>
+        <view class='leftBorder'></view>
+      </view>
+      <view class='bottomBorder'></view>
+    </view>
+
+    <view class='cover' hidden='{{!showTag}}' data-id="{{menuCurrent}}"  bindtap='selectMenu'>
+    </view>
+    <view hidden='{{!showTag}}'>
+      <view class="tag-info bc-w">
+        <view class='tag-items tag-current'>全部</view>
+      </view>
+    </view>
+    
+
+  </view>
+  
+
+</view>
+
+<import src="../../template/template.wxml"/>
+<block wx:for="{{college_id?reCourseList:courseList}}">
+  <template is="product" data="{{...item}}"></template>
+</block>
+
+<view hidden="{{college_id?(reCourseList.length?true:false):(courseList.length?true:false)}}">
+  <template is="non"  data="{{...non}}"></template>
+</view>

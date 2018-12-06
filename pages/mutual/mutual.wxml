@@ -1,0 +1,47 @@
+<view class='p-h15  bc-w'>
+  <view class='join-tit'>
+    <image class="join-icon" src='/images/biaoti@2x.png'></image>
+    <text>加入房间</text>
+  </view>
+  <view class="room mt-15">
+    <view class="entry">
+      <view class='room-entry border5'>
+        <text class='entry-txt'>房间号</text>
+        <input class="entry-cont" placeholder='请输入房间号' value='{{roomNo}}' bindinput='roomNo'></input>
+        <view class='bottomBorder'></view>
+      </view>
+      <view class='room-entry border5'>
+        <text class='entry-txt'>房间密码</text>
+        <input class="entry-cont" placeholder='请输入密码' password="true" value='{{roomPwd}}' bindinput='roomPwd'></input>
+        <view class='bottomBorder'></view>
+      </view>
+    </view>
+    <image class="join-room" src='/images/join@2x.png' bindtap='joinRoom'></image>
+  </view>
+</view>
+
+<view class='p-h15 topBorder-10 bc-w'>
+  <view class='join-tit p-v15'>
+    <image class="join-icon" src='/images/biaoti@2x.png'></image>
+    <text>与我相关</text>
+  </view>
+
+  <view class="lived-list"  wx:for="{{liveList}}" hidden='{{liveList.length==0?true:false}}' data-state="{{item.state}}" data-id="{{item.course_id}}" bindtap='goToLived'>
+    <image class='lived-pic' src='{{item.course_image}}'></image>
+    <view class="lived-cont">
+      <view class='lived-tit'>{{item.course_title}}</view>
+      <view class='lived-time'>开始时间:{{item.start}}</view>
+      <view class="lived-state">{{item.state==0?'未开始':item.state==1?'直播中':'已结束'}}</view>
+    </view>
+  </view>
+
+  <view class="non-lived" hidden='{{liveList.length==0?false:true}}'>
+    <image src='/images/zanwu@2x.png'></image>
+    <text>暂无创建的互播</text>
+  </view>
+  
+</view>
+
+<view class='join-tip' hidden='{{!showTip}}'>
+  <view class="tip-txt">{{tipTxt}}</view>
+</view>

@@ -1,0 +1,47 @@
+<!--pages/edit_address/edit_address.wxml-->
+
+<view class="p-h15 bc-w mt-10">
+  <view class="key-value border5">
+    <view class="key">收货人：</view>
+    <view class="value">
+      <input type='text' placeholder='请填写收货人' value='{{nickname}}' bindinput='entryName'></input>
+      <image hidden='{{true}}' class="right-icon" src='/images/right.png'></image>
+    </view>
+    <view class="bottomBorder"></view>
+  </view>
+  <view class="key-value border5">
+    <view class="key">联系电话：</view>
+    <view class="value">
+      <input type='text' placeholder='请填写联系电话' value='{{phone}}' bindinput='entryPhone'></input>
+      <image hidden='{{true}}' class="right-icon" src='/images/right.png'></image>
+    </view>
+    <view class="bottomBorder"></view>
+  </view>
+  <view class="key-value border5">
+    <view class="key">所在地区：</view>
+    <view class="value">
+      <input type='text' placeholder='请填写所在地区' value='{{area}}' bindinput='entryArea'></input>
+      <image hidden='{{true}}' class="right-icon" src='/images/right.png'></image>
+    </view>
+    <view class="bottomBorder"></view>
+  </view>
+  <view class="key-value border5">
+    <view class="key">详细地址：</view>
+    <view class="value">
+      <input type='text' placeholder='请填写详细地址' value='{{address}}' bindinput='entryAddress'></input>
+      <image hidden='{{true}}' class="right-icon" src='/images/right.png'></image>
+    </view>
+    <view class="bottomBorder"></view>
+  </view>
+
+</view>
+
+<view class="select-radio p-h15 mt-10 bc-w">
+  <image class="radio" src='{{check_url}}' bindtap='selectCheck'></image>
+  <radio hidden='{{true}}'></radio>
+  <text>设置为默认收货地址</text>
+</view>
+
+<view class="btn">
+  <button bindtap='saveAddress'>保存</button>
+</view>

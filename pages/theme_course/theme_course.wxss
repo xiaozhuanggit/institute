@@ -1,0 +1,3 @@
+/* pages/theme_course/theme_course.wxss */
+@import "/template/template.wxss";
+

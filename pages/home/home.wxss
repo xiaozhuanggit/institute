@@ -1,0 +1,274 @@
+/* pages/home/home.wxss */
+@import "/template/template.wxss";
+page{
+  background-color: #efeff4;
+}
+.tab{
+  padding: 0 20rpx;
+  overflow-x: scroll;
+}
+.tab-content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 90rpx;
+  font-size: 24rpx;
+  color: #666;
+}
+.tab-content::after{
+  content: '';
+  padding: 10rpx;
+}
+.tab text{
+  float: left;
+  min-width: 128rpx;
+  height: 50rpx;
+  padding: 0 10rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background-color: #F6F7F9;
+  border-radius: 6rpx;
+  margin: 0 10rpx;
+  flex-shrink:0;
+}
+
+.slide-info{
+  position: relative;
+  width: 100%;
+  height: 260rpx;
+}
+.slide-info swiper{
+  height: 100%;
+}
+.slide{
+  height: 100%;
+}
+.slide image{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.sequence{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+}
+
+.sequence-icon{
+  width: 10rpx;
+  height: 10rpx;
+  margin: 0 6rpx;
+  border-radius: 50%;
+  background-color: #C0A45B;
+  opacity: 0.8;
+}
+.current{
+  width: 24rpx;
+  height: 10rpx;
+  border-radius: 10rpx;
+  opacity: 1;
+}
+
+.more{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100rpx;
+}
+.more-title image{
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+  margin: -2rpx 0 0 10rpx;
+}
+.more-txt{
+  font-size: 24rpx;
+  color: #bcbcbc;
+}
+.more-txt image{
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+  margin: -4rpx 0 0 10rpx;
+}
+
+.college-cont{
+  position: relative;
+  padding: 0 30rpx 50rpx 30rpx;
+}
+.college{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 258rpx;
+  padding: 0 40rpx;
+  font-size: 30rpx;
+  box-shadow: 1px 1px 4px 0 rgba(188,188,188,0.50);
+  border-radius: 3px;
+  box-sizing: border-box;
+  z-index: 11;
+}
+.college-icon{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+.college-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  height: 100%;
+  padding: 48rpx 0;
+  font-size: 26rpx;
+  color: #999;
+  margin-left: 30rpx;
+  box-sizing: border-box;
+}
+.college-name{
+  font-size: 30rpx;
+  color: #333;
+}
+.college-info text{
+  margin-left: 30rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.join-college{
+  width: 152rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  text-align: center;
+  border-radius: 26rpx;
+  background-color: #C0A45B;
+  font-size: 26rpx;
+  color: #fff;
+}
+.bottom-shadow{
+  position: absolute;
+  left: 0;
+  bottom: 40rpx;
+  width: 100%;
+  height: 30rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.bottom-shadow view{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(188,188,188,0.50);
+  border-radius: 3px;
+}
+
+.college-goods .goods{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.college-goods .goods-item{
+  width: 326rpx;
+  font-size: 26rpx;
+  margin-bottom: 38rpx;
+  box-shadow:none;
+  border-radius: 0;
+  border: none;
+  overflow: hidden;
+}
+.college-goods .goods-info{
+  padding: 10rpx;
+}
+.goods-pic{
+  position: relative;
+  width: 326rpx;
+  height: 208rpx;
+}
+.college-goods .goods-img{
+  width: 100%;
+  height: 100%;
+}
+.live-sign{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 66rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  font-size: 20rpx;
+  color: #fff;
+  background-color: #C0A45B;
+  border-radius: 0 7px 7px 0;
+}
+.series-chapter{
+  position: absolute;
+  bottom: 10rpx;
+  right: 10rpx;
+  padding: 4rpx 10rpx;
+  font-size: 20rpx;
+  color: #fff;
+  background-color: rgba(0,0,0,0.50);
+  border-radius: 2px;
+}
+
+.college-goods .goods-producer{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+.college-goods .goods-cont{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #bcbcbc;
+}
+.college-goods .goods-datas{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.college-goods .goods-datas image{
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+  margin: -8rpx 0 0 0;
+}
+
+.college-brand{
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  flex-wrap: wrap;
+}
+.college-item{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  text-align: center;
+  width: 33.33%;
+  padding:0 20rpx 48rpx 20rpx;
+  box-sizing: border-box;
+}
+.college-item-icon{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  border:2rpx solid #C0A45B;
+}
+
+

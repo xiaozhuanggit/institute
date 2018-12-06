@@ -1,0 +1,137 @@
+<!--pages/rule/rule.wxml-->
+
+<view class="question-item bc-w p-h15">
+  <view class='question-tit'>
+    <text>Q1</text>
+    <text>什么是学力？</text>
+  </view>
+  <view class="question-cont">学力是学力是学力是学力是学力是在私链圈、云屏台所做的任何对其他用户积极有益的行为都是值得鼓励的学力是学力</view>
+  
+</view>
+
+<view class="question-item bc-w p-h15 mt-10">
+  <view class='question-tit mt-10'>
+    <text>Q2</text>
+    <text>如何获得学力？</text>
+  </view>
+  <view class="question-cont">私链圈互动、云屏台学习课程及测评等即可获得学力哦~</view>
+  <view class=''>
+    <view class='question-assort border5'>
+      <image class='assort-icon' src='/images/reply.png'></image>
+      <view class="assort-cont">
+        <view class="assort-info">
+          <text>私链圈回复主题</text>
+          <text>+2学力</text>
+        </view>
+        <view class='credit-limit mt-5'>每日上限10</view>
+      </view>
+      <view class='bottomBorder'></view>
+    </view>
+
+    <view class='question-assort border5'>
+      <image class='assort-icon' src='/images/reply1.png'></image>
+      <view class="assort-cont">
+        <view class="assort-info">
+          <text>私链圈分享主题</text>
+          <text>+2学力</text>
+        </view>
+        <view class='credit-limit mt-5'>每日上限6</view>
+      </view>
+      <view class='bottomBorder'></view>
+    </view>
+
+    <view class='question-assort border5'>
+      <image class='assort-icon' src='/images/reply2.png'></image>
+      <view class="assort-cont">
+        <view class="assort-info">
+          <text>私链圈主题点赞</text>
+          <text>+1学力</text>
+        </view>
+        <view class='credit-limit mt-5'>每日上限5</view>
+      </view>
+      <view class='bottomBorder'></view>
+    </view>
+
+    <view class='question-assort border5'>
+      <image class='assort-icon' src='/images/reply3.png'></image>
+      <view class="assort-cont">
+        <view class="assort-info">
+          <text>私链圈回答问题</text>
+          <text>+1学力</text>
+        </view>
+        <view class='credit-limit mt-5'>每日上限5</view>
+      </view>
+      <view class='bottomBorder'></view>
+    </view>
+
+    <view class='question-assort border5'>
+      <image class='assort-icon' src='/images/reply4.png'></image>
+      <view class="assort-cont">
+        <view class="assort-info">
+          <text>私链圈主题被设为精华</text>
+          <text>+20学力</text>
+        </view>
+        <view class='credit-limit mt-5'>每日上限40</view>
+      </view>
+      <view class='bottomBorder'></view>
+    </view>
+
+    <view class='question-assort border5'>
+      <image class='assort-icon' src='/images/reply5.png'></image>
+      <view class="assort-cont">
+        <view class="assort-info">
+          <text>私链圈主题被点赞</text>
+          <text>+1学力</text>
+        </view>
+        <view class='credit-limit mt-5'>每日上限5</view>
+      </view>
+      <view class='bottomBorder'></view>
+    </view>
+
+    <view class='question-assort border5'>
+      <image class='assort-icon' src='/images/reply6.png'></image>
+      <view class="assort-cont">
+        <view class="assort-info">
+          <text>观看直播课程</text>
+          <text>观看分钟数/10</text>
+        </view>
+        <view class='credit-limit mt-5'>每日上限15</view>
+      </view>
+      <view class='bottomBorder'></view>
+    </view>
+
+    <view class='question-assort border5'>
+      <image class='assort-icon' src='/images/reply7.png'></image>
+      <view class="assort-cont">
+        <view class="assort-info">
+          <text>观看点播课程</text>
+          <text>观看分钟数/10</text>
+        </view>
+        <view class='credit-limit mt-5'>每日上限20</view>
+      </view>
+      <view class='bottomBorder'></view>
+    </view>
+
+    <view class='question-assort border5'>
+      <image class='assort-icon' src='/images/reply8.png'></image>
+      <view class="assort-cont">
+        <view class="assort-info">
+          <text>参与测评</text>
+          <text>答题数/5</text>
+        </view>
+        <view class='credit-limit mt-5'>每日上限10</view>
+      </view>
+      <view class='bottomBorder'></view>
+    </view>
+
+  </view>
+</view>
+
+<view class="question-item bc-w mt-10 p-h15">
+  <view class='question-tit'>
+    <text>Q3</text>
+    <text>如何使用学力？</text>
+  </view>
+  <view class="question-cont">可使用学力在云屏台福利社兑换商品。</view>
+  
+</view>

@@ -1,0 +1,53 @@
+<!--pages/detail/detail.wxml-->
+<image class="goods-img" src='{{product.commImage}}'></image>
+<view class="active p-h15">
+  <view class="price">
+    <text>{{product.virtualPrice}}学力</text>
+    <text class="original-pirce ml-10">￥{{product.basePrice}}</text>
+  </view>
+  <view class="active-time">
+    <text class="active-txt">{{limit_txt}}</text>
+    <view class="time mt-5">
+      <view class="time-info">
+        <view>{{limit_day}}</view>
+        <text>天</text>
+      </view>
+      <view class="time-info">
+        <view>{{limit_hour}}</view>
+        <text>:</text>
+      </view>
+      <view class="time-info">
+        <view>{{limit_minute}}</view>
+        <text>:</text>
+      </view>
+      <view class="time-info">
+        <view>{{limit_second}}</view>
+        <text></text>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+<view class="goods-info mt-10 bc-w">
+  <view class="goods-title ellipsis">{{product.commName}}</view>
+  <view class="limit mt-15">
+    <text>每人{{product.exchangeLimit==2?'每日':''}}限兑换{{product.limitNum}}件</text>
+    <view class="limit-condition">
+      <text>已兑换{{product.progress || 0}}%</text>
+      <view class="progress-bc ml-5">
+        <view class="progress" style='width:{{product.progress || 0}}%'></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="goods-brief mt-10 bc-w">
+  <text class="brief-txt">商品介绍</text>
+  <rich-text nodes="{{commDetail}}"></rich-text>
+  <!--<web-view style="width:100%;height:40rpx;" src="{{commDetail}}"></web-view>-->
+</view>
+
+<view class="btn bc-w">
+  <button data-id="{{comm_id}}" bindtap='goToOrder'>我要兑换</button>
+</view>

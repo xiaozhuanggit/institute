@@ -1,0 +1,68 @@
+
+<template name="product">
+
+  <view class="product p-h15 bc-w">
+    <view class="product-items border5" data-id="{{course_id}}" bindtap='goToPage'>
+      <view class="product-picture">
+        <image src='{{course_image}}'></image>
+        <view wx:if="{{course_type==3}}" class="live-sign">直播</view>
+        <view wx:if="{{series_type==2}}" class="series-chapter">更新至{{course_series_num || 1}}章</view>
+      </view>
+      <view class="product-content">
+        <view class='product-title one-ellipsis'>{{course_title}}</view>
+        <view class='product-desc one-ellipsis'>{{course_profile}}</view>
+        <view class="product-per"></view>
+        <view class="product-data">
+
+          <view class="product-data-show">
+            <image src='/images/section.png'></image>
+            <text>共{{course_series_num || 1}}节</text>
+          </view>
+
+          <view class="product-data-show">
+            <image src='/images/guankan.png'></image>
+            <text>{{click_num}}</text>
+          </view>
+
+        </view>
+      </view>
+
+      <view class='bottomBorder'></view>
+    </view>
+
+  </view>
+
+</template>
+
+<template name="goods">
+
+  <view class="goods-item bc-w">
+    <image class="goods-img" src='{{course_image}}'></image>
+    <view class="goods-info">
+      <view class='goods-title one-ellipsis'>{{course_title}}</view>
+      <view class="goods-cont mt-5">
+        <image class="goods-producer" src='{{course_image}}'></image>
+        <view class="goods-datas ml-10">
+          <view class="">
+            <image src='/images/renshu@2x.png'></image>
+            <text class='ml-5'>{{click_num}}</text>
+          </view>
+          <view class="ml-20">
+            <image src='/images/zhuti@2x.png'></image>
+            <text class='ml-5'>{{click_num}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+</template>
+
+
+<template name="non">
+  <view class="non-cont">
+    <image class="non-icon" src='{{non_icon}}'></image>
+    <view class='non-tip mt-10'>{{non_tip}}</view>
+  </view>
+</template>

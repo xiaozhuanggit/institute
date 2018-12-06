@@ -1,0 +1,71 @@
+<!--pages/information/information.wxml-->
+<view class="state-info">
+  <image src='/images/chenggong@2x.png'></image>
+  <view class="mt-10">兑换成功啦~</view>
+</view>
+
+<view class='information p-h15'>
+  <view class="feedback-info">
+    <view class="feedback-title">支付人</view>
+    <view>{{orderInfo.nickname}}</view>
+  </view>
+  <view class="feedback-info" hidden='{{goodsType!=3?true:false}}'>
+    <view class="feedback-title">收货人</view>
+    <view>{{orderInfo.consignee}}</view>
+  </view>
+  <view class="feedback-info" hidden='{{goodsType!=1?true:false}}'>
+    <view class="feedback-title">序列号</view>
+    <view>{{orderInfo.serialNum}}</view>
+  </view>
+  <view class="feedback-info" hidden='{{goodsType!=1?true:false}}'>
+    <view class="feedback-title">验证码</view>
+    <view>{{orderInfo.vCode}}</view>
+  </view>
+  <view class="feedback-info" hidden='{{goodsType!=2?true:false}}'>
+    <view class="feedback-title">提货码</view>
+    <view>{{orderInfo.pickUpCode}}</view>
+  </view>
+  <view class="feedback-info" hidden='{{goodsType!=2?true:false}}'>
+    <view class="feedback-title ">提货地点</view>
+    <view class='one-ellipsis'>{{orderInfo.storeAddress}}</view>
+  </view>
+  <view class="feedback-info" hidden='{{goodsType!=3?true:false}}'>
+    <view class="feedback-title">收货地址</view>
+    <view class='one-ellipsis'>{{orderInfo.area+orderInfo.addressDetail}}</view>
+  </view>
+  <view class="feedback-info" hidden='{{goodsType!=2?true:false}}'>
+    <view class="feedback-title">联系方式</view>
+    <view>{{orderInfo.phone}}</view>
+  </view>
+  <view class="feedback-info" hidden='{{goodsType!=2?true:false}}'>
+    <view class="feedback-title">营业时间</view>
+    <view>{{orderInfo.storeTime}}</view>
+  </view>
+  <view class="feedback-info">
+    <view class="feedback-title">支付时间</view>
+    <view>{{orderInfo.payTime}}</view>
+  </view>
+  <view class="feedback-info">
+    <view class="feedback-title">支付扣币</view>
+    <view>{{orderInfo.virtualPrice*orderInfo.commNum}}</view>
+  </view>
+  <view class="feedback-info">
+    <view class="feedback-title">兑换商品</view>
+    <view class='one-ellipsis'>{{orderInfo.commName}}</view>
+  </view>
+  <view class="feedback-info">
+    <view class="feedback-title">交易时间</view>
+    <view>{{orderInfo.createTime}}</view>
+  </view>
+  <view class="feedback-info">
+    <view class="feedback-title">订单编号</view>
+    <view>{{orderInfo.orderCode}}</view>
+  </view>
+
+</view>
+
+<view class="btn">
+  <button bindtap='goToShopping'>返回继续浏览</button>
+</view>
+
+

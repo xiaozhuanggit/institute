@@ -1,0 +1,4 @@
+<!--pages/loading/loading.wxml-->
+<view class="loading">
+  <image src='/images/jiazai.gif'></image>
+</view>

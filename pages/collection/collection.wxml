@@ -1,0 +1,23 @@
+<!--pages/collection/collection.wxml-->
+<view class='p-h15'>
+
+    <view class="carousel-item bc-w p-h15 mt-10" wx:for="{{collectionList}}" >
+      <view class="cur-info">
+        <image class="cur-icon" src='/images/default_head.png'></image>
+        <text>{{item.course_title}}</text>
+      </view>
+      <image class="carousel-img" src="{{item.course_image}}"></image>
+      <view class="carousel-edit">
+
+        <image class="opt-btn" data-id="{{item.course_id}}" src='/images/look_back.png' bindtap='lookBack'></image>
+        <image class="opt-btn" data-id="{{item.course_id}}" src='/images/cancel.png' bindtap='saveCancel'></image>
+      
+      </view>
+    </view>
+
+</view>
+
+<import src="../../template/template.wxml"/>
+<view hidden="{{collectionList.length?true:false}}">
+  <template is="non"  data="{{...non}}"></template>
+</view>

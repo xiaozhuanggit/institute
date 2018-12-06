@@ -1,0 +1,99 @@
+/* pages/practice/practice.wxss */
+
+.prac{
+  padding: 20rpx 30rpx 0 30rpx;
+}
+.prac-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60rpx 0 80rpx 0;
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(188,188,188,0.50);
+  border-radius: 2px;
+}
+
+.prac-tit{
+  padding: 0 38rpx;
+  text-align: center;
+  height: 84rpx;
+}
+.prac-score{
+  position: relative;
+  width: 616rpx;
+  height: 196rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30rpx;
+  color: #fff;
+}
+.cur-score{
+  position: relative;
+}
+.cur-score image{
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.prac-score .score-bc{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.socre{
+  position: relative;
+  font-size: 34rpx;
+  z-index: 1;
+}
+
+.prac-cont{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80rpx;
+}
+.left-icon,.right-icon{
+  width: 38rpx;
+  height: 2px;
+  margin: 0 10rpx;
+}
+
+.prac-sort{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.sort-num image ,.sort-time image{
+  width: 26rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.result{
+  margin-left: 20rpx;
+}
+
+.sub-btn{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 20rpx;
+}
+
+.sub-btn button{
+  width: 350rpx;
+  height: 78rpx;
+  background: #C0A45B;
+  border-radius: 20px;
+  font-size: 30rpx;
+  color: #fff;
+}

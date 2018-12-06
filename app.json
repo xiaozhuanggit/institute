@@ -1,0 +1,102 @@
+{
+  "pages": [
+    
+    "pages/loading/loading",
+    "pages/mine/mine",
+    "pages/home/home",
+    "pages/collection/collection",
+    "pages/record/record",
+    "pages/pay_course/pay_course",
+    "pages/lecturer_ring/lecturer_ring",
+    "pages/person/person",
+    "pages/schedule/schedule",
+    "pages/recommend/recommend",
+    "pages/classmate/classmate",
+    "pages/course_detail/course_detail",
+    "pages/lecturer_course/lecturer_course",
+    "pages/theme_course/theme_course",
+    "pages/course/course",
+    
+    "pages/card/card",
+    "pages/phone/phone",
+    "pages/mailList/mailList",
+    "pages/card_editer/card_editer",
+    "pages/save_card/save_card",
+    "pages/live_order/live_order",
+    "pages/rule/rule",
+    "pages/credit/credit",
+
+    "pages/shopping/shopping",
+    
+    "pages/detail/detail",
+    "pages/order_sure/order_sure",
+    "pages/manage_address/manage_address",
+    "pages/information/information",
+    "pages/binding/binding",
+    "pages/edit_address/edit_address",
+    
+    "pages/nickname/nickname",
+    
+    "pages/success/success",
+    "pages/bind_loading/bind_loading",
+    "pages/sure_login/sure_login",
+    "pages/bind_phone/bind_phone",
+
+    "pages/ranking/ranking",
+    "pages/result/result",
+    "pages/subject/subject",
+    "pages/practice/practice",
+    "pages/topic_list/topic_list",
+
+    "pages/lived/lived",  
+    "pages/mutual/mutual"
+  ],
+
+  
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#929292",
+    "selectedColor": "#C0A45B",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/images/shouye.png",
+        "selectedIconPath": "/images/shouyed.png"
+      },
+      {
+        "pagePath": "pages/schedule/schedule",
+        "text": "课程表",
+        "iconPath": "/images/kecheng@2x.png",
+        "selectedIconPath": "/images/kechenged@2x.png"
+      },
+      {
+        "pagePath": "pages/mutual/mutual",
+        "text": "互播",
+        "iconPath": "/images/liv.png",
+        "selectedIconPath": "/images/livd.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/wwode@2x.png",
+        "selectedIconPath": "/images/wode@2x.png"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "pageA",
+      "pages": [
+        "page/lived/lived"
+      ]
+    }
+  ]
+}

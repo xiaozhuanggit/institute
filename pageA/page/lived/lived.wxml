@@ -1,0 +1,40 @@
+<live-player class="live" id="live" src="{{courseContent.rtmpPullUrl}}" mode="RTC" autoplay  object-fit="fillCrop">
+  <cover-view class="room-cont">
+    <cover-view class='live-info'>
+      <cover-view class='room-info'>
+        <cover-image class='roon-close' bindtap='goToMutual' src='/images/tuichu@2x.png'></cover-image>
+        <cover-view>{{courseContent.courseTitle}}</cover-view>
+        <cover-view class='ml-5'>房间:{{courseContent.roomCode}}</cover-view>
+      </cover-view>
+      <cover-view class='live-time mt-10'>
+        <cover-image class='live-icon' src='/images/shichang@2x.png'></cover-image>
+        <cover-view>{{showTime}}</cover-view>
+      </cover-view>
+    </cover-view>
+    <cover-view class="user-name">{{courseContent.nickname}}</cover-view>
+    <cover-image class="user-list" src='/images/chengyuan@2x.png' bindtap='showMemberList'></cover-image>
+    <cover-view class='member'>
+      <cover-view class='member-num'>成员<cover-view class="all-no">({{channelList.length}}人)</cover-view></cover-view>
+      <cover-view class='member-list'>
+        <cover-view class='member-items border5' wx:for="{{channelList}}">
+
+          <cover-view class='member-head'>
+            <cover-image  src='{{item.photoUrl}}'></cover-image>
+            <cover-view hidden='{{item.identity==3?true:false}}'>{{item.identity==1?'发起人':item.identity==2?'主持人':''}}</cover-view>
+          </cover-view>
+
+          <cover-view class='member-info ml-10'>
+            <cover-view class='member-name'>{{item.nickname}}</cover-view>
+            <cover-view class='member-college mt-5'>
+              <cover-image class='coll-icon' src='/images/zuzhi@2x.png'></cover-image>
+              <cover-view>{{item.orgName}}</cover-view>
+            </cover-view>
+          </cover-view>
+          <cover-view class='member-state'>互动中</cover-view>
+          <cover-view class='bottomBorder-w'></cover-view>
+        </cover-view>
+
+      </cover-view>
+    </cover-view>
+  </cover-view>
+</live-player>

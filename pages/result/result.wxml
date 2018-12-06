@@ -1,0 +1,50 @@
+
+
+
+<view class='result-state'>
+  <image src='/images/default_bc.png'></image>
+  <view class='mt-20'>很遗憾，此次测评没通过，继续努力吧！</view>
+</view>
+
+<view class='result-info mt-10'>
+  <view class='result-cont'>
+    <view class='result-tit'>高效能人士的七个习惯</view>
+    <view class='result-acore'>
+      <view class='mark'>
+        <view class='mark-tit'>测评成绩</view>
+        <view class='mt-5'>0分</view>
+      </view>
+      <view class='rt'>
+        <view class='rt-tit'>答对题数</view>
+        <view class='mt-5'>0/20</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='result-btn'>
+    <button>查看错题</button>
+    <button bindtap='goToRanking'>查看榜单</button>
+    <button>重新练习</button>
+  </view>
+</view>
+
+<view class='cover' hidden='true'>
+  <view class='model-cont'>
+    <view class='model-tit'>您做错了以下题目</view>
+    <view class='cont-list mt-10'>
+      <view class='cont-items mt-5'>1. 高效能人士的七个习惯时光的最佳之处，在于其长度。这句话用来形容以下哪个观点？(单选）</view>
+      <view class='cont-items mt-5'>2. 高效能人士的七个习惯时光的最佳之处，在于其长度。这句话用来形容以下哪个观点？(单选）</view>
+    </view>
+    <image class='close-btn' src='/images/guanbi@2x.png'></image>
+  </view>
+</view>
+
+<view class='cover' hidden='true'>
+  <view class='frame'>
+    <view class='frame-cont border5'>确定要重新练习？<view class='bottomBorder'></view></view>
+    <view class='frame-btn'>
+      <view class='cancel-btn'>取消</view>
+      <view class='sure-btn border5'>确定<view class='leftBorder'></view></view>
+    </view>
+  </view>
+</view>

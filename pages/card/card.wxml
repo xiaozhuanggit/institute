@@ -1,0 +1,60 @@
+<view class="section section-fixed">
+
+  <canvas class="qrCode"  canvas-id="qrCode" style="width:{{windowWidth}}px; height:{{windowHeight}}px"></canvas>
+
+  <view class="show-info">
+    <view class="p-15">
+      <view class="content p-15">
+        <view class="item-two clearfix">
+          <text class=" f-22  line-57" id="nameWidth">昵称</text>
+          <text class="ml-10 f-13 line-57">岗位</text>
+          
+        </view>
+        <image class="pos-rt  square-57" src="/images/a1.jpg"></image>
+        <view class="mark c-gray " wx:if="{{remark}}">备注<text class="c-main ml-10 f-13">备注信息</text></view>
+        <view class="mark c-gray">电话<text class="c-main ml-10 f-16 bold">12345678912</text><view class="mark-tip ml-10 f-11 bc-e">已绑定</view></view>
+        <view class="mark c-gray">公司<text class="c-main ml-10">公司名称</text></view>
+        <view class="mark c-gray">Email<text class="c-main ml-10">email</text></view>
+        <view class="code">
+          <view class="share mr-10" bindtap="canvasCard">
+            <image class="icon square-25" src="/images/tcode.png"></image>
+            <text class="c-c9 mt-5 f-11">分享朋友圈</text>
+          </view>
+
+          <view class="share" bindtap="buildQrCode">
+            <image class="icon square-25" src="/images/scode.png"></image>
+            <text class="c-c9 mt-5 f-11">小程序码</text>
+          </view>
+        </view>
+      </view>
+      <view class="dec">
+        <image class="icon icon-add" src="/images/addr.png"></image>
+        <text>未选择位置，请选择您的位置信息</text>
+      </view>
+    </view>
+
+    <!-- 更多 -->
+    <view class="more">
+      <view class="more-dec">
+        <text class="more-txt">更多</text>
+        <text class="more-info">更多信息</text>
+      </view>
+      <block wx:for="{{upImgs}}">
+        <image class="show-img" mode="widthFix" src="{{item.imgUrl}}"></image>
+      </block>
+    </view>
+
+    <!-- 编辑名片 -->
+    <view class="p-15">
+      <button class="whole-btn bc-sub  mt-10" type="primary" open-type="share"> 给微信好友递名片 </button>
+      <view class="flex mt-10">
+        <button class="half-btn bc-w" bindtap="goToCardEditer" type="default"> 编辑名片 </button>
+        <view class="w-15"></view>
+        <button class="half-btn bc-w" type="default" bindtap="goToMailList"> 我的名片夹 </button>
+      </view>
+    </view>
+  </view>
+
+  
+  
+</view>

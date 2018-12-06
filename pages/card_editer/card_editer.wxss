@@ -1,0 +1,99 @@
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.show-txt{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 30rpx;
+}
+.editer{
+  position: relative;
+}
+.change-btn{
+  position: absolute;
+  right: 30rpx;
+  top: 10rpx;
+  border: 1px solid #d9d9d9;
+  border-radius: 8rpx;
+}
+.title-name{
+  width: 100rpx;
+}
+.more-dec{
+  background-color: #fff;
+  padding: 28rpx 30rpx;
+  display: flex;
+}
+.more-txt{
+  width: 100rpx;
+  display: inline-block;
+}
+.more-info{
+  margin-left: 20rpx;
+}
+.upload{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  padding: 20rpx 10rpx 20rpx 30rpx;
+}
+.upload-info{
+  position: relative;
+  width: 158rpx;
+  height: 158rpx;
+}
+.icon{
+  margin: 0 auto;
+}
+.upload-img{
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.upload-icon{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40rpx;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.disable-upload{
+  display: flex;
+  align-items: center;
+  text-align:center;
+  justify-content: center; 
+}
+.cross{
+  position: relative;
+}
+.x-axis,.y-axis{
+  width: 8rpx;
+  height: 80rpx;
+  background-color: #d9d9d9;
+}
+.x-axis{
+  margin: 0 auto;
+}
+.y-axis{
+  position: absolute;
+  top: 0;
+  left: 38rpx;
+  transform:rotate(90deg);
+  -ms-transform:rotate(90deg); 	/* IE 9 */
+  -moz-transform:rotate(90deg); 	/* Firefox */
+  -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+  -o-transform:rotate(90deg); 	/* Opera */
+}
+.btn{
+  width: 126rpx;
+  height: 62rpx;
+  text-align: center;
+  line-height: 62rpx;
+  font-size: 26rpx;
+}
